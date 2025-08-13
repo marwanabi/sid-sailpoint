@@ -9,6 +9,7 @@
     --blue: #0071CE;
     --white: #ffffff;
     --darkGray: #415364;
+    --lightGray: #F2F5F7;
     --cobalt: #0033A1;
     --hotPink: #CC27B0;
 }
@@ -27,8 +28,8 @@ body {
     padding: 20px;
 }
 
-.page{
-height: calc(100vh - 101px);
+.page {
+    height: calc(100vh - 101px);
 }
 
 .flex {
@@ -40,24 +41,32 @@ height: calc(100vh - 101px);
     text-align: center;
 }
 
-.btn-hotPink{
+.btn-hotPink {
     background-color: var(--hotPink);
     color: var(--white)
 }
 
+.sidsailpoint-eyeBrow {
+    color: var(--darkGray);
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 /* navigation */
+
+header{
+    background-color: var(--white);
+}
+
 .sidsailpoint-navigation {
     background-color: var(--white);
     padding: 20px 58px;
     justify-content: space-between;
     align-items: center;
-}
-
-.sidsailpoint-navigation .sidsailpoint-eyebrow{
-    color: var(--darkGray);
-    font-weight: 14px;
-    line-height: 110%;
-    letter-spacing: 2px;
+    max-width: 1330px;
+    margin: 0 auto;
 }
 
 .sidsailpoint-navigation img {
@@ -159,13 +168,23 @@ height: calc(100vh - 101px);
 }
 
 .btn-outline {
-    border: 2px solid #bdc3c7;
-    color: #6c757d;
+    background-color: transparent;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    font-size: 16px;
+    line-height: 0%;
+    transition: all 0.2s;
 }
 
 .btn-outline:hover {
-    border-color: #3498db;
-    color: #3498db;
+     background-color: var(--blue);
+    color: var(--white);
+    transition: all 0.2s;
+}
+
+.btn-outline:hover path{
+    fill: var(--white);
+    transition: all 0.2s;
 }
 
 .btn-large {
@@ -268,7 +287,7 @@ height: calc(100vh - 101px);
     padding: 2rem; */
 }
 
-.cta-card .btn{
+.cta-card .btn {
     padding: 19px 48px
 }
 
@@ -419,17 +438,17 @@ height: calc(100vh - 101px);
 }
 
 .stage-button:hover:not(.locked) {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    /* transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
 }
 
 .stage-button.completed {
-    border-color: #27ae60;
-    background: #f8fff9;
+    /* border-color: #27ae60;
+    background: #f8fff9; */
 }
 
 .stage-button.locked {
-    opacity: 0.5;
+    /* opacity: 0.5; */
     cursor: not-allowed;
 }
 
@@ -501,15 +520,15 @@ height: calc(100vh - 101px);
 }
 
 /* Scenario */
-.scenario-content {
+/* .scenario-content {
     background: white;
     border-radius: 12px;
     padding: 2.5rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border: 1px solid #e9ecef;
     margin-bottom: 2rem;
-}
-
+} */
+/* 
 .scenario-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -538,7 +557,7 @@ height: calc(100vh - 101px);
     font-size: 0.9rem;
     color: #6c757d;
     margin-bottom: 0.5rem;
-}
+} */
 
 /* Question */
 .options-container {
@@ -767,14 +786,14 @@ height: calc(100vh - 101px);
 
 /* how it works */
 
-#sidsailpoint-workProcess-page .content-wrapper{
+#sidsailpoint-workProcess-page .content-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
 
-.sidsailpoint-workProcess .content-wrapper>div{
+.sidsailpoint-workProcess .content-wrapper>div {
     background-color: var(--white);
     border-radius: 24px;
     max-width: 672px;
@@ -783,22 +802,154 @@ height: calc(100vh - 101px);
     width: 100%;
 }
 
-.sidsailpoint-workProcess h2{
+.sidsailpoint-workProcess h2 {
     color: var(--cobalt);
     font-size: 28px;
     line-height: 120%;
     padding-bottom: 10px;
 }
 
-.sidsailpoint-workProcess ul li{
+.sidsailpoint-workProcess ul li {
     color: var(--darkGray);
     font-size: 14px;
     line-height: 160%;
     list-style-position: inside;
 }
 
-.sidsailpoint-workProcess .btn{
+.sidsailpoint-workProcess .btn {
     font-size: 14px;
     margin-top: 30px;
+    padding: 10px 16px;
+}
+
+[data-stage] {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* filter: brightness(0.8) saturate(0.6); */
+}
+
+[data-stage]:hover {
+    /* filter: brightness(1.1) saturate(1.2);
+    transform: scale(1.05); */
+}
+
+[data-stage].completed {
+    /* filter: brightness(1.2) saturate(1.3) hue-rotate(90deg); */
+}
+
+[data-stage].locked {
+    filter: brightness(0.5) saturate(0.3) grayscale(1);
+    cursor: not-allowed;
+}
+
+[data-stage].unlocked {
+    filter: brightness(1) saturate(1);
+}
+
+.hoverState {
+    opacity: 0;
+}
+
+.stage-button .show {
+    display: none;
+}
+
+.stage-button.completed .show {
+    display: block;
+}
+
+.stage-button.completed:hover .hoverState {
+    opacity: 1;
+}
+
+/* map page */
+
+#map-page {
+    background-image: url(assets/sidSailPoint-mapBG.png);
+    background-size: cover;
+}
+
+#map-page svg {
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* scenario-page */
+#scenario-page{
+    background-image: url(assets/sidSailPoint-questionBG.png);
+    background-size: cover;
+    padding: 100px 60px;
+}
+
+#scenario-page .scenario-content{
+    background-color: var(--lightGray);
+    border-radius: 24px;
+    padding: 30px 36px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    width: 100%;
+}
+
+#scenario-page .content-wrapper.flex{
+    justify-content: center;
+    max-width: 100%;
+}
+
+#scenario-page .scenario-description{
+    text-align: left;
+}
+
+#scenario-page .scenario-description .sidsailpoint-eyeBrow{
+    margin-bottom: 35px;
+}
+
+#scenario-page .scenario-description h3{
+    color: var(--cobalt);
+    margin-bottom: 10px;
+}
+
+#scenario-page .scenario-description p{
+    color: var(--darkGray);
+    font-size: 16px;
+    line-height: 160%;
+    margin-bottom: 30px;
+}
+
+#scenario-page .scenario-description>p:last-of-type{
+    margin-bottom: 80px;
+}
+
+#scenario-page .sidsailpoint-context {
+    background: var(--white);
+    border-radius: 20px;
+    gap: 40px;
+    justify-content: center;
+    padding: 40px;
+}
+
+#scenario-page .sidsailpoint-context p span{
+    color: var(--cobalt);
+}
+
+#scenario-page .sidsailpoint-context p:last-of-type{
+    margin-bottom: 0;
+}
+
+#scenario-page #scenario-img{
+max-width: 500px;
+width: 100%;
+}
+
+#scenario-page #scenario-img img{
+width: 100%;
+}
+
+#scenario-page .button-group{
+    justify-content: flex-end;
+}
+#continue-btn{
+    display: flex;
+    gap: 10px;
     padding: 10px 16px;
 }

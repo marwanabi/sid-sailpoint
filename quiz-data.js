@@ -13,7 +13,18 @@ const questions = [
     {
         id: 1,
         stage: 1,
-        scenario: "You approach the ancient castle's towering gates. The stone walls are covered in mysterious runes that seem to glow faintly in the moonlight. A riddle is carved into the entrance.",
+        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        scenario: `<p class="sidsailpoint-eyeBrow poppins-semibold">inherited chaos</p>
+        <h3 class="poppins-semibold">Scenario</h3>
+        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
+        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <div class="sidsailpoint-context flex">
+        <img src="assets/sidSailPoint-contextpersona.png"/>
+        <div>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
+        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        </div>
+        </div>`,
         question: "What does the ancient rune at the castle entrance represent?",
         options: ["Protection", "Wisdom", "Courage", "Knowledge"],
         correctAnswer: 0
