@@ -4874,12 +4874,13 @@
 			<div class="content-wrapper flex">
 				<div id="scenario-img"></div>
 				<div id="scenario-content" class="scenario-content">
+					<p id="sidsailpoint-eyeBrow" class="sidsailpoint-eyeBrow poppins-semibold"></p>
 					<div id="scenario-text" class="scenario-description"></div>
 					<div class="button-group">
 						<!-- <button class="btn btn-outline" onclick="navigateTo('map')">
                         Back to Map
                     </button> -->
-						<button id="continue-btn" class="btn btn-outline" onclick="app.navigateToQuestion()">
+						<button id="continue-btn" class="btn btn-outline poppins-semibold" onclick="app.navigateToQuestion()">
 							<span>Next</span>
 							<svg width="17" height="12" viewBox="0 0 17 12" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -4895,7 +4896,7 @@
 		</div>
 
 		<!-- Question Page -->
-		<div id="question-page" class="page" style="display: none;">
+		<!-- <div id="question-page" class="page" style="display: none;">
 			<div class="content-wrapper">
 				<div class="text-center">
 					<div id="question-stage-number" class="stage-number"></div>
@@ -4923,12 +4924,12 @@
 					</button>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Results Page -->
 		<div id="results-page" class="page" style="display: none;">
 			<div class="content-wrapper">
-				<div class="text-center">
+				<div class="text-center" style="display: none;">
 					<div id="result-icon-large" class="results-icon"></div>
 					<h1 class="page-title">
 						Quest <span class="accent">Complete!</span>
@@ -4936,10 +4937,34 @@
 				</div>
 
 				<div class="results-card">
-					<h2 id="result-title-large" class="results-title"></h2>
+					<div class="result-graphic">
+					<p class="sidsailpoint-eyeBrow">You are an</p>
+					<h2 id="result-title-large" class="results-title poppins-semibold"></h2>
+					<div id="result-image"></div>
+					</div>
 					<p id="result-description-large" class="results-description"></p>
+					<div id="results-description" class="animate-fade-in">
+						<div class="results-description--grayBG">
+							<h4 id="results-description--title" class="poppins-semibold"></h4>
+							<p id="results-description--desc" class="poppins-regular">You’re starting to recognize identity risks, but many threats remain hidden. There’s much more to uncover.</p>
+						</div>
+						<p id="results-description--second">You've proven your instincts. Now sharpen your knowledge.</p>
+						<div id="results-links">
+						<a href="#" class="poppins-semibold">Download Modern Identity for Dummies</a>
+						<br>
+						<a href="#" class="poppins-semibold">Visit SailPoint Identity University</a>
+						</div>
+						<div class="results-social">
+						<h4 class="poppins-semibold">Share your results!</h4>
+						<div class="results-social--icon">
+							<a href=""><img src="assets/sidsailpoint-linkedin.png" alt=""></a>
+							<a href=""><img src="assets/sidsailpoint-x.png" alt=""></a>
+							<a href=""><img src="assets/sidsailpoint-facebook.png" alt=""></a>
+						</div>
+						</div>
+						</div>
 
-					<div class="stats-grid">
+					<div class="stats-grid" style="display: none;">
 						<div class="stat-card">
 							<div id="score-number" class="stat-number"></div>
 							<div class="stat-label">Correct Answers</div>
@@ -4954,17 +4979,17 @@
 						</div>
 					</div>
 
-					<div class="progress-bar-container">
+					<div class="progress-bar-container" style="display: none;">
 						<div id="final-progress" class="progress-fill"></div>
 					</div>
 				</div>
 
-				<div class="summary-card">
+				<div class="summary-card" style="display: none;">
 					<h3 class="summary-title">Your Adventure Summary</h3>
 					<div id="summary-stages" class="summary-stages"></div>
 				</div>
 
-				<div class="button-group">
+				<div class="button-group" style="display: none;">
 					<button class="btn btn-outline" onclick="navigateTo('landing')">
 						🏠 Home
 					</button>

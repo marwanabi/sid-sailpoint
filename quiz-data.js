@@ -14,7 +14,33 @@ const questions = [
         id: 1,
         stage: 1,
         img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
-        scenario: `<p class="sidsailpoint-eyeBrow poppins-semibold">inherited chaos</p>
+        eyeBrow: 'inherited chaos',
+        scenario: `
+        <h3 class="poppins-semibold">Scenario</h3>
+        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
+        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <div class="sidsailpoint-context flex">
+        <img src="assets/sidSailPoint-contextpersona.png"/>
+        <div>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
+        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        </div>
+        </div>`,
+        question: "What’s the best course of action?",
+        options: [
+            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
+            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
+            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
+            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
+        ],
+        correctAnswer: 1
+    },
+    {
+        id: 2,
+        stage: 2,
+        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        eyeBrow: 'Trusted partner turned competitor',
+        scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
         <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
         <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
@@ -26,91 +52,188 @@ const questions = [
         </div>
         </div>`,
         question: "What does the ancient rune at the castle entrance represent?",
-        options: ["Protection", "Wisdom", "Courage", "Knowledge"],
-        correctAnswer: 0
-    },
-    {
-        id: 2,
-        stage: 2,
-        scenario: "Deep within the mystic forest, talking animals guide your path. The trees whisper secrets of old magic, and you encounter a wise owl perched on a branch of silver leaves.",
-        question: "What lesson does the wise owl teach in the mystic forest?",
-        options: ["Fear is an illusion", "Trust your instincts", "Knowledge comes from listening", "Magic is everywhere"],
+        options: [
+            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
+            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
+            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
+            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+        ],
         correctAnswer: 2
     },
     {
         id: 3,
         stage: 3,
-        scenario: "The crystal cave sparkles with gems of every color. Each crystal resonates with a different frequency, creating a harmonious melody that echoes through the cavern.",
-        question: "Which crystal holds the power of clarity and focus?",
-        options: ["Ruby", "Sapphire", "Emerald", "Diamond"],
+        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        eyeBrow: 'inherited chaos',
+        scenario: `
+        <h3 class="poppins-semibold">Scenario</h3>
+        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
+        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <div class="sidsailpoint-context flex">
+        <img src="assets/sidSailPoint-contextpersona.png"/>
+        <div>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
+        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        </div>
+        </div>`,
+        question: "What does the ancient rune at the castle entrance represent?",
+        options: [
+            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
+            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
+            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
+            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+        ],
         correctAnswer: 3
     },
     {
         id: 4,
         stage: 4,
-        scenario: "In the dragon's lair, ancient treasures are guarded by a wise old dragon. The dragon challenges you not with fire, but with a test of character and honor.",
-        question: "What quality does the dragon value most?",
-        options: ["Bravery", "Honesty", "Intelligence", "Strength"],
+        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        eyeBrow: 'inherited chaos',
+        scenario: `
+        <h3 class="poppins-semibold">Scenario</h3>
+        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
+        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <div class="sidsailpoint-context flex">
+        <img src="assets/sidSailPoint-contextpersona.png"/>
+        <div>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
+        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        </div>
+        </div>`,
+        question: "What does the ancient rune at the castle entrance represent?",
+        options: [
+            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
+            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
+            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
+            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+        ],
         correctAnswer: 1
     },
     {
         id: 5,
         stage: 5,
-        scenario: "Among the floating islands, you must navigate through clouds and mist. Each island holds a piece of an ancient puzzle that reveals the secrets of levitation.",
-        question: "What enables the islands to float in the sky?",
-        options: ["Magic crystals", "Ancient technology", "Pure belief", "Harmony with nature"],
+        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        eyeBrow: 'inherited chaos',
+        scenario: `
+        <h3 class="poppins-semibold">Scenario</h3>
+        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
+        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <div class="sidsailpoint-context flex">
+        <img src="assets/sidSailPoint-contextpersona.png"/>
+        <div>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
+        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        </div>
+        </div>`,
+        question: "What does the ancient rune at the castle entrance represent?",
+        options: [
+            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
+            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
+            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
+            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+        ],
         correctAnswer: 3
     },
     {
         id: 6,
         stage: 6,
-        scenario: "The Phoenix Temple burns with eternal flames that never consume. Here, the Phoenix teaches about transformation, renewal, and the power of rising from ashes.",
-        question: "What is the Phoenix's greatest teaching?",
-        options: ["Power through fire", "Rebirth through challenge", "Immortality through wisdom", "Strength through solitude"],
+        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        eyeBrow: 'inherited chaos',
+        scenario: `
+        <h3 class="poppins-semibold">Scenario</h3>
+        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
+        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <div class="sidsailpoint-context flex">
+        <img src="assets/sidSailPoint-contextpersona.png"/>
+        <div>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
+        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        </div>
+        </div>`,
+        question: "What does the ancient rune at the castle entrance represent?",
+        options: [
+            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
+            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
+            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
+            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+        ],
         correctAnswer: 1
     },
     {
         id: 7,
         stage: 7,
-        scenario: "At the final destination, the Golden Treasure awaits. But the real treasure isn't gold or jewels - it's the wisdom and growth you've gained throughout your journey.",
-        question: "What is the true treasure of the adventure?",
-        options: ["Golden coins", "Magical artifacts", "Personal growth", "Fame and glory"],
+        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        eyeBrow: 'inherited chaos',
+        scenario: `
+        <h3 class="poppins-semibold">Scenario</h3>
+        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
+        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <div class="sidsailpoint-context flex">
+        <img src="assets/sidSailPoint-contextpersona.png"/>
+        <div>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
+        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        </div>
+        </div>`,
+        question: "What does the ancient rune at the castle entrance represent?",
+        options: [
+            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
+            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
+            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
+            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+        ],
         correctAnswer: 2
     }
 ];
 
 const quizResults = [
     {
-        title: "Novice Adventurer",
-        description: "You've taken your first steps into the world of adventure! Every expert was once a beginner.",
+        title: "Identity Novice",
+        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        description: "You’re starting to recognize identity risks, but many threats remain hidden. There’s much more to uncover.",
+        descTitle:'Early in the journey',
+        descSecond:'You have proven your instincts. Now sharpen your knowledge.',
         icon: "🌱",
         minScore: 0,
         maxScore: 1
     },
     {
-        title: "Apprentice Explorer",
-        description: "You show promise and curiosity! Continue learning and exploring to unlock your potential.",
+        title: "Identity Apprentice",
+        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        description: "You’ve identified some key risks, but several were missed. Your instincts are forming—AI can help guide the way.",
+        descTitle:'Making progress',
+        descSecond:'Well played. But the journey to mastery never stops.',
         icon: "🗺️",
         minScore: 2,
         maxScore: 3
     },
     {
-        title: "Skilled Questor",
-        description: "Your wisdom and intuition guide you well. You understand the deeper meanings of your journey.",
+        title: "Identity Explorer",
+        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        description: "You caught most issues and show growing skill in detecting risky identity situations. You're on your way to mastery.",
+        descTitle:'Solid understanding',
+        descSecond:'You crushed the challenge. Now take your knowledge even further.',
         icon: "⚔️",
         minScore: 4,
         maxScore: 5
     },
     {
-        title: "Master Adventurer",
-        description: "Exceptional! You possess great wisdom and insight. You see beyond the surface of challenges.",
+        title: "Identity Strategist",
+        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        description: "Your decisions reflect deep knowledge of identity security. You’re ready to lead change with AI-powered tools.",
+        descTitle:'Strong Performance',
+        descSecond:'Game mastered. Time to assess your real-world impact.',
         icon: "👑",
         minScore: 6,
         maxScore: 6
     },
     {
-        title: "Legendary Hero",
-        description: "Perfect! You are a true sage with complete understanding of the adventure's lessons.",
+        title: "Identity Guardian",
+        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        description: "You flawlessly uncovered every risk—your instincts, accuracy, and timing are elite. You’re ready to shape the future of identity security.",
+        descTitle:'Top-tier expertise',
+        descSecond:'You crushed the challenge. Now take your program even further.',
         icon: "🌟",
         minScore: 7,
         maxScore: 7
