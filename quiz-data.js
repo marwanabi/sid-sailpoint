@@ -28,152 +28,156 @@ const questions = [
         </div>`,
         question: "What’s the best course of action?",
         options: [
-            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
-            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
-            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
-            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
+            { text: "Manually audit each system and build an inventory from scratch", fact: `<span class="incorrect">Incorrect.</span>Manual discovery is slow, error-prone, and unscalable — especially in dynamic environments.` },
+            { text: "Wait for engineering teams to confirm which accounts are in use", fact: `<span class="incorrect">Incorrect!</span>That approach relies on incomplete knowledge and delays resolution of unmanaged risk.` },
+            { text: "Use automated discovery to scan systems and surface machine accounts", fact: `<span class="correct">Correct.</span>Machine Identity Security automates discovery helping you gain visibility and control.` },
+            { text: "Defer discovery until after the next project phase to avoid disruption", fact: `<span class="incorrect">Incorrect.</span>Every day of delay increases your exposure to misused or orphaned machine accounts.` }
         ],
-        correctAnswer: 1
+        correctAnswer: 2
     },
     {
         id: 2,
         stage: 2,
-        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        img:`<img src="assets/sidsailpoint-trustedpartner.png"/>`,
         eyeBrow: 'Trusted partner turned competitor',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
-        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
-        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <p class="poppins-regular">Acme Solutions has been a long-standing business partner with deep access to your internal development tools and shared collaboration environments.
+This morning, they issued a press release announcing a product that directly competes with yours — featuring capabilities nearly identical to those built during your joint initiative.
+</p>
+        <p class="poppins-regular">The formal partnership hasn’t been terminated, but Acme’s users still have active credentials across your systems. As the identity governance lead, it’s on you to decide what happens next.
+.</p>
         <div class="sidsailpoint-context flex">
         <img src="assets/sidSailPoint-contextpersona.png"/>
         <div>
-        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
-        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Oversee third-party access and mitigate identity-related risks</p>
+        <p><span class="poppins-semibold">Context: </span>Partner access still active despite clear competitive shift</p>
         </div>
         </div>`,
         question: "What’s the best course of action?",
         options: [
-            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
-            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
-            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
-            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
+            { text: "Wait for Acme to reach out about their future plans", fact: `<span class="incorrect">Incorrect.</span>Relying on a now-competing third party to voluntarily relinquish access leaves your systems vulnerable.` },
+            { text: "Immediately revoke all access tied to Acme Solutions", fact: `<span class="correct">correct!</span>Residual partner access poses a clear risk. Cut access now, re-evaluate collaboration later.` },
+            { text: "Revoke access from the most privileged users first, and monitor the rest", fact: `<span class="incorrect">Incorrect.</span>Identities need to be addressed uniformly to eliminate exposure.` },
+            { text: "Wait for internal project sponsors to align before making changes", fact: `<span class="incorrect">Incorrect.</span>Risk escalation demands proactive access decisions. Governance shouldn’t stall behind politics or process.` }
         ],
-        correctAnswer: 2
+        correctAnswer: 1
     },
     {
         id: 3,
         stage: 3,
-        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        img:`<img src="assets/sidsailpoint-ghost.png"/>`,
         eyeBrow: 'Ghosts of Access Past',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
-        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
-        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <p class="poppins-regular">A senior engineer has accumulated multiple roles over time due to departmental transfers, leading to excessive and conflicting permissions across development, production, and security environments.</p>
+        <p class="poppins-regular">Over the past three years, a senior engineer has moved between teams spanning infrastructure, DevOps, and cybersecurity. With each transfer, new roles were added — but older ones were never removed. Now, this individual has conflicting permissions across production, development, and security environments, creating the perfect storm for privilege escalation or accidental misuse.</p>
+        <p class="poppins-regular">As the identity governance lead, it's your job to identify and resolve this risk before it leads to a security incident or audit finding.</p>
         <div class="sidsailpoint-context flex">
         <img src="assets/sidSailPoint-contextpersona.png"/>
         <div>
-        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
-        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Ensure least-privilege access across user lifecycle events</p>
+        <p><span class="poppins-semibold">Context: </span>Accumulated roles causing excessive, risky entitlements</p>
         </div>
         </div>`,
         question: "What’s the best course of action?",
         options: [
-            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
-            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
-            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
-            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
+            { text: "Leave all current access in place until their manager submits a change request", fact: `<span class="incorrect">Incorrect.</span>This reactive approach delays resolution and keeps high-risk access alive. Relying on manual requests introduces unnecessary risks` },
+            { text: "Launch an access certification campaign and use AI to recommend least-privilege roles", fact: `<span class="correct">correct!</span>This allows you to quickly surface outliers and use identity intelligence to streamline access based on job function.` },
+            { text: "Reassign the user to a generic “engineering” role and hope it resolves overlap", fact: `<span class="incorrect">Incorrect.</span>Role assumptions without validation often miss context-specific permissions and don't address lingering access.` },
+            { text: "Wait until the next quarterly review to revisit the user’s access", fact: `<span class="incorrect">Incorrect.</span>Known risks shouldn’t sit idle. Access reviews need to happen in real-time when red flags emerge.` }
         ],
-        correctAnswer: 3
+        correctAnswer: 1
     },
     {
         id: 4,
         stage: 4,
-        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        img:`<img src="assets/sidsailpoint-identity.png"/>`,
         eyeBrow: 'Identity loop',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
-        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
-        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <p class="poppins-regular">Your organization recently hired 75 new employees across multiple departments. Due to disconnected HR and IT systems, onboarding has been slow and inconsistent — some employees didn’t receive necessary access on day one, while others received more than they needed. Meanwhile, access for recently departed employees is still active in key systems due to delayed offboarding processes.</p>
+        <p class="poppins-regular">As the identity lifecycle owner, you must take immediate steps to standardize provisioning and deprovisioning to reduce risk and improve productivity.</p>
         <div class="sidsailpoint-context flex">
         <img src="assets/sidSailPoint-contextpersona.png"/>
         <div>
-        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
-        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Streamline identity lifecycle processes and minimize access risk</p>
+        <p><span class="poppins-semibold">Context: </span>Disjointed onboarding/offboarding creating operational delays and security gaps</p>
         </div>
         </div>`,
         question: "What’s the best course of action?",
         options: [
-            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
-            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
-            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
-            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
+            { text: "Continue relying on manual tickets for onboarding and offboarding", fact: `<span class="incorrect">Incorrect.</span>Manual processes are slow, error-prone, and introduce compliance and security risks.` },
+            { text: "Send department managers a quarterly report asking them to review user access", fact: `<span class="incorrect">Incorrect!</span>Quarterly access reviews are insufficient when real-time changes are required. Lifecycle events need immediate action.` },
+            { text: "Integrate HR systems with ILM workflows and automate lifecycle triggers", fact: `<span class="correct">Correct.</span>Real-time integration ensures accurate provisioning and prompt access removal based on lifecycle events.` },
+            { text: "Address only offboarding issues and wait to automate onboarding later", fact: `<span class="incorrect">Incorrect.</span>Partial solutions expose the business to risk. Lifecycle automation must be end-to-end.` }
         ],
-        correctAnswer: 1
+        correctAnswer: 2
     },
     {
         id: 5,
         stage: 5,
-        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        img:`<img src="assets/sidSailPoint-ai.png"/>`,
         eyeBrow: 'ai overreach',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
-        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
-        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <p class="poppins-regular">Your company just rolled out an internal Gen AI tool to help employees draft documents, analyze reports, and answer queries using enterprise data. Adoption explodes overnight. Within days, you discover the AI agent is connected to file shares, inboxes, and structured systems — without clear restrictions on what data it can access or what actions it can take. </p>
+        <p class="poppins-regular">Now you're responsible for auditing and controlling the AI’s access before it inadvertently exposes regulated or confidential information.</p>
         <div class="sidsailpoint-context flex">
         <img src="assets/sidSailPoint-contextpersona.png"/>
         <div>
-        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
-        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Govern AI identities and restrict unintended data exposure.</p>
+        <p><span class="poppins-semibold">Context: </span>Rapid adoption of AI agents with limited visibility into their entitlements, behaviors, or data exposure.</p>
         </div>
         </div>`,
         question: "What’s the best course of action?",
         options: [
-            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
-            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
-            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
-            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
+            { text: "Block all AI agent activity until access is reviewed", fact: `<span class="incorrect">Incorrect.</span>Halting all usage disrupts productivity, hurts adoption, and may lead to unsanctioned workarounds. ` },
+            { text: "Rely on the engineering team to restrict AI permissions manually", fact: `<span class="incorrect">Incorrect!</span>Manual controls are prone to gaps and can’t scale with evolving AI integrations and dynamic access paths.` },
+            { text: "Treat AI agents as first-class identities and analyze their access risk", fact: `<span class="correct">correct.</span>Manage the lifecycle of AI agents with automated identity governance and enforce access certifications..` },
+            { text: "Wait until AI usage policies are finalized across the org", fact: `<span class="incorrect">Incorrect.</span>Policy development takes time, and sensitive data could be exposed in the meantime` }
         ],
-        correctAnswer: 3
+        correctAnswer: 2
     },
     {
         id: 6,
         stage: 6,
-        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        img:`<img src="assets/sidSailPoint-link.png"/>`,
         eyeBrow: 'anyone with the link',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
-        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
-        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <p class="poppins-regular">You’re leading identity governance at a growing enterprise that’s rapidly expanding its digital footprint. During a routine audit, you discover sensitive files  —  including financial reports, customer information, and intellectual property  —  have been shared externally using anonymous file links. There are no expiration dates, no recipient tracking, and no record of who approved the sharing.</p>
+        <p class="poppins-regular">Worse, you find dozens of similar cases across departments with no consistent policy or visibility into who’s sharing what with whom.</p>
         <div class="sidsailpoint-context flex">
         <img src="assets/sidSailPoint-contextpersona.png"/>
         <div>
-        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
-        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Prevent unauthorized external sharing of sensitive data.</p>
+        <p><span class="poppins-semibold">Context: </span>File-sharing behavior is decentralized, poorly monitored, and risks regulatory non-compliance</p>
         </div>
         </div>`,
         question: "What’s the best course of action?",
         options: [
-            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
-            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
-            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
-            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
+            { text: "Block all external file sharing across the enterprise", fact: `<span class="incorrect">Incorrect.</span>Overly restrictive policies disrupt productivity, push users to shadow IT, and don’t address root causes.` },
+            { text: "Trust team managers to manually review file-sharing behavior", fact: `<span class="incorrect">Incorrect!</span>Manual oversight is inconsistent and scales poorly in fast-moving, cross-functional environments.` },
+            { text: "Implement automated detection and alerting for sensitive file", fact: `<span class="correct">Correct.</span>Adopting a solution that can detect, alert and respond to external file sharing reduces exposure risk.` },
+            { text: "Wait until quarterly audits to assess external exposure", fact: `<span class="incorrect">Incorrect.</span>Delayed detection increases the risk of data leakage, compliance violations, and reputational damage.` }
         ],
-        correctAnswer: 1
+        correctAnswer: 2
     },
     {
         id: 7,
         stage: 7,
-        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        img:`<img src="assets/sidSailPoint-anomaly.png"/>`,
         eyeBrow: 'anomaly Detected!',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
-        <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
-        <p class="poppins-regular">You’re responsible for identifying every machine identity before something critical slips through the cracks.</p>
+        <p class="poppins-regular">Identity teams are always on the lookout for the riskiest behaviors and access in their environment. Occasionally, identities can accumulate more access than needed to do their job. Identity teams need help! With such vast identity types and quantities, identifying anomalous access is virtually impossible for humans to do effectively. </p>
+        <p class="poppins-regular">Let identity outliers handle it! Identity outliers leverages advanced machine learning to analyze an organization’s identity access relationships and flags anomalous access for review and remediation.</p>
         <div class="sidsailpoint-context flex">
         <img src="assets/sidSailPoint-contextpersona.png"/>
         <div>
-        <p><span class="poppins-semibold">Internal responsibility: </span>Take ownership of all machine identities and establish governance</p>
-        <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
+        <p><span class="poppins-semibold">Internal responsibility: </span>Identify and remediate the riskiest access in your environment</p>
+        <p><span class="poppins-semibold">Context: </span>It is a daunting task to identify anomalous access in a complex environment at scale</p>
         </div>
         </div>`,
         question: "What’s the best course of action?",
@@ -181,9 +185,9 @@ const questions = [
             { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
             { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
             { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
-            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
+            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
         ],
-        correctAnswer: 2
+        correctAnswer: 1
     }
 ];
 

@@ -216,7 +216,7 @@ class AdventureQuiz {
         questionSection.style.display = 'none';
         questionSection.innerHTML = `
             <div class="question-header">
-                <h3 class="question-title">${question.question}</h3>
+                <h3 class="question-title poppins-semibold">${question.question}</h3>
             </div>
             <div id="options-container" class="options-container">
                 ${question.options.map((option, index) => `

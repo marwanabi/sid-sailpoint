@@ -625,6 +625,11 @@ header {
     margin-bottom: 35px;
 }
 
+.question-header .question-title{
+font-size: 28px;
+color: var(--cobalt);
+}
+
 .option-button {
     background: white;
     border: 1px solid #DAE1E9;
@@ -990,7 +995,7 @@ header {
 #scenario-page {
     background-image: url(assets/sidSailPoint-questionBG.png);
     background-size: cover;
-    /* height: 100%; */
+    height: 100%;
     padding: 100px 60px;
 }
 
