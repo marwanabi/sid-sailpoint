@@ -70,8 +70,7 @@ This morning, they issued a press release announcing a product that directly com
         eyeBrow: 'Ghosts of Access Past',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
-        <p class="poppins-regular">A senior engineer has accumulated multiple roles over time due to departmental transfers, leading to excessive and conflicting permissions across development, production, and security environments.</p>
-        <p class="poppins-regular">Over the past three years, a senior engineer has moved between teams spanning infrastructure, DevOps, and cybersecurity. With each transfer, new roles were added — but older ones were never removed. Now, this individual has conflicting permissions across production, development, and security environments, creating the perfect storm for privilege escalation or accidental misuse.</p>
+        <p class="poppins-regular">A senior engineer has accumulated multiple roles over time due to departmental transfers, leading to excessive and conflicting permissions across development, production, and security environments. Over the past three years, a senior engineer has moved between teams spanning infrastructure, DevOps, and cybersecurity. With each transfer, new roles were added — but older ones were never removed. Now, this individual has conflicting permissions across production, development, and security environments, creating the perfect storm for privilege escalation or accidental misuse.</p>
         <p class="poppins-regular">As the identity governance lead, it's your job to identify and resolve this risk before it leads to a security incident or audit finding.</p>
         <div class="sidsailpoint-context flex">
         <img src="assets/sidSailPoint-contextpersona.png"/>
@@ -194,7 +193,7 @@ This morning, they issued a press release announcing a product that directly com
 const quizResults = [
     {
         title: "Identity Novice",
-        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityNovice.png"/>`,
         description: "You’re starting to recognize identity risks, but many threats remain hidden. There’s much more to uncover.",
         descTitle:'Early in the journey',
         descSecond:'You have proven your instincts. Now sharpen your knowledge.',
@@ -204,42 +203,42 @@ const quizResults = [
     },
     {
         title: "Identity Apprentice",
-        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityApprentice.png"/>`,
         description: "You’ve identified some key risks, but several were missed. Your instincts are forming—AI can help guide the way.",
         descTitle:'Making progress',
         descSecond:'Well played. But the journey to mastery never stops.',
         icon: "🗺️",
         minScore: 2,
-        maxScore: 3
+        maxScore: 2
     },
     {
         title: "Identity Explorer",
-        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityExplorer.png"/>`,
         description: "You caught most issues and show growing skill in detecting risky identity situations. You're on your way to mastery.",
         descTitle:'Solid understanding',
         descSecond:'You crushed the challenge. Now take your knowledge even further.',
         icon: "⚔️",
-        minScore: 4,
-        maxScore: 5
+        minScore: 3,
+        maxScore: 3
     },
     {
         title: "Identity Strategist",
-        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityStrategist.png"/>`,
         description: "Your decisions reflect deep knowledge of identity security. You’re ready to lead change with AI-powered tools.",
         descTitle:'Strong Performance',
         descSecond:'Game mastered. Time to assess your real-world impact.',
         icon: "👑",
-        minScore: 6,
-        maxScore: 6
+        minScore: 4,
+        maxScore: 5
     },
     {
         title: "Identity Guardian",
-        image: `<img src="assets/sidsailpoint-identitynovice.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityGuardian.png"/>`,
         description: "You flawlessly uncovered every risk—your instincts, accuracy, and timing are elite. You’re ready to shape the future of identity security.",
         descTitle:'Top-tier expertise',
         descSecond:'You crushed the challenge. Now take your program even further.',
         icon: "🌟",
-        minScore: 7,
+        minScore: 6,
         maxScore: 7
     }
 ];
