@@ -51,12 +51,12 @@ const questions = [
         <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
         </div>
         </div>`,
-        question: "What does the ancient rune at the castle entrance represent?",
+        question: "What’s the best course of action?",
         options: [
-            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
-            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
-            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
-            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
+            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
+            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
+            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
         ],
         correctAnswer: 2
     },
@@ -64,7 +64,7 @@ const questions = [
         id: 3,
         stage: 3,
         img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
-        eyeBrow: 'inherited chaos',
+        eyeBrow: 'Ghosts of Access Past',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
         <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
@@ -76,12 +76,12 @@ const questions = [
         <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
         </div>
         </div>`,
-        question: "What does the ancient rune at the castle entrance represent?",
+        question: "What’s the best course of action?",
         options: [
-            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
-            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
-            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
-            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
+            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
+            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
+            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
         ],
         correctAnswer: 3
     },
@@ -89,7 +89,7 @@ const questions = [
         id: 4,
         stage: 4,
         img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
-        eyeBrow: 'inherited chaos',
+        eyeBrow: 'Identity loop',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
         <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
@@ -101,12 +101,12 @@ const questions = [
         <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
         </div>
         </div>`,
-        question: "What does the ancient rune at the castle entrance represent?",
+        question: "What’s the best course of action?",
         options: [
-            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
-            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
-            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
-            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
+            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
+            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
+            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
         ],
         correctAnswer: 1
     },
@@ -114,7 +114,7 @@ const questions = [
         id: 5,
         stage: 5,
         img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
-        eyeBrow: 'inherited chaos',
+        eyeBrow: 'ai overreach',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
         <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
@@ -126,12 +126,12 @@ const questions = [
         <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
         </div>
         </div>`,
-        question: "What does the ancient rune at the castle entrance represent?",
+        question: "What’s the best course of action?",
         options: [
-            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
-            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
-            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
-            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
+            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
+            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
+            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
         ],
         correctAnswer: 3
     },
@@ -139,7 +139,7 @@ const questions = [
         id: 6,
         stage: 6,
         img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
-        eyeBrow: 'inherited chaos',
+        eyeBrow: 'anyone with the link',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
         <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
@@ -151,12 +151,12 @@ const questions = [
         <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
         </div>
         </div>`,
-        question: "What does the ancient rune at the castle entrance represent?",
+        question: "What’s the best course of action?",
         options: [
-            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
-            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
-            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
-            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
+            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
+            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
+            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
         ],
         correctAnswer: 1
     },
@@ -164,7 +164,7 @@ const questions = [
         id: 7,
         stage: 7,
         img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
-        eyeBrow: 'inherited chaos',
+        eyeBrow: 'anomaly Detected!',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
         <p class="poppins-regular">You’ve just stepped into a critical new role overseeing identity security across core infrastructure. On day one, you realize there’s no reliable inventory of machine accounts. No documentation. No ownership records. Just bots, service accounts, and automated processes running across multiple systems — many with unknown purpose or risk level.</p>
@@ -176,12 +176,12 @@ const questions = [
         <p><span class="poppins-semibold">Context: </span>No visibility, no documentation, and unclear account purpose across the environment</p>
         </div>
         </div>`,
-        question: "What does the ancient rune at the castle entrance represent?",
+        question: "What’s the best course of action?",
         options: [
-            { text: "Fear is an illusion", fact: "While fear can be overcome, owls actually teach about observing reality clearly." },
-            { text: "Trust your instincts", fact: "Instincts are important, but owls are more associated with careful observation." },
-            { text: "Knowledge comes from listening", fact: "Owls are known for their exceptional hearing and silent observation skills." },
-            { text: "Magic is everywhere", fact: "Though true, this is more of a general forest teaching than specific owl wisdom." }
+            { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
+            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
+            { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
+            { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Incorrect. Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
         ],
         correctAnswer: 2
     }
