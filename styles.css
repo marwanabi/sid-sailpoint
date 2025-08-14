@@ -20,6 +20,7 @@ body {
     color: var(--darkGray);
     min-height: 100vh;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 body.quiz-completed nav.sidsailpoint-navigation.flex {
@@ -126,6 +127,7 @@ header {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    -webkit-font-smoothing: antialiased;
 }
 
 .poppins-semibold {
@@ -711,18 +713,20 @@ color: var(--cobalt);
 }
 
 .option-fact {
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .option-fact span.correct {
     display: block;
     color: #01801F;
+    font-weight: 600;
 }
 
 .option-fact span.incorrect {
 
     display: block;
     color: #E6241E;
+    font-weight: 600;
 }
 
 .option-icon {
@@ -1024,6 +1028,7 @@ color: var(--cobalt);
 
 #scenario-page .scenario-description h3 {
     color: var(--cobalt);
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
@@ -1040,6 +1045,7 @@ color: var(--cobalt);
 
 #scenario-page .sidsailpoint-context {
     background: var(--white);
+    border: 1px solid #DAE1E9;
     border-radius: 20px;
     gap: 40px;
     justify-content: center;
@@ -1142,6 +1148,20 @@ color: var(--cobalt);
 #results-description a{
     color: var(--blue);
     font-size: 16px;
+    text-decoration: none;
+    display: inline-flex
+;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#results-description a span{
+    padding-right: 2px;
+}
+
+#results-description a img{
+        width: 20px;
+    height: 20px
 }
 
 #results-links a:first-of-type{

@@ -29,8 +29,8 @@ const questions = [
         question: "What’s the best course of action?",
         options: [
             { text: "Manually audit each system and build an inventory from scratch", fact: `<span class="incorrect">Incorrect.</span>Manual discovery is slow, error-prone, and unscalable — especially in dynamic environments.` },
-            { text: "Wait for engineering teams to confirm which accounts are in use", fact: `<span class="incorrect">Incorrect!</span>That approach relies on incomplete knowledge and delays resolution of unmanaged risk.` },
-            { text: "Use automated discovery to scan systems and surface machine accounts", fact: `<span class="correct">Correct.</span>Machine Identity Security automates discovery helping you gain visibility and control.` },
+            { text: "Wait for engineering teams to confirm which accounts are in use", fact: `<span class="incorrect">Incorrect.</span>That approach relies on incomplete knowledge and delays resolution of unmanaged risk.` },
+            { text: "Use automated discovery to scan systems and surface machine accounts", fact: `<span class="correct">Correct!</span>Machine Identity Security automates discovery helping you gain visibility and control.` },
             { text: "Defer discovery until after the next project phase to avoid disruption", fact: `<span class="incorrect">Incorrect.</span>Every day of delay increases your exposure to misused or orphaned machine accounts.` }
         ],
         correctAnswer: 2
@@ -107,8 +107,8 @@ This morning, they issued a press release announcing a product that directly com
         question: "What’s the best course of action?",
         options: [
             { text: "Continue relying on manual tickets for onboarding and offboarding", fact: `<span class="incorrect">Incorrect.</span>Manual processes are slow, error-prone, and introduce compliance and security risks.` },
-            { text: "Send department managers a quarterly report asking them to review user access", fact: `<span class="incorrect">Incorrect!</span>Quarterly access reviews are insufficient when real-time changes are required. Lifecycle events need immediate action.` },
-            { text: "Integrate HR systems with ILM workflows and automate lifecycle triggers", fact: `<span class="correct">Correct.</span>Real-time integration ensures accurate provisioning and prompt access removal based on lifecycle events.` },
+            { text: "Send department managers a quarterly report asking them to review user access", fact: `<span class="incorrect">Incorrect.</span>Quarterly access reviews are insufficient when real-time changes are required. Lifecycle events need immediate action.` },
+            { text: "Integrate HR systems with ILM workflows and automate lifecycle triggers", fact: `<span class="correct">Correct!</span>Real-time integration ensures accurate provisioning and prompt access removal based on lifecycle events.` },
             { text: "Address only offboarding issues and wait to automate onboarding later", fact: `<span class="incorrect">Incorrect.</span>Partial solutions expose the business to risk. Lifecycle automation must be end-to-end.` }
         ],
         correctAnswer: 2
@@ -132,8 +132,8 @@ This morning, they issued a press release announcing a product that directly com
         question: "What’s the best course of action?",
         options: [
             { text: "Block all AI agent activity until access is reviewed", fact: `<span class="incorrect">Incorrect.</span>Halting all usage disrupts productivity, hurts adoption, and may lead to unsanctioned workarounds. ` },
-            { text: "Rely on the engineering team to restrict AI permissions manually", fact: `<span class="incorrect">Incorrect!</span>Manual controls are prone to gaps and can’t scale with evolving AI integrations and dynamic access paths.` },
-            { text: "Treat AI agents as first-class identities and analyze their access risk", fact: `<span class="correct">correct.</span>Manage the lifecycle of AI agents with automated identity governance and enforce access certifications..` },
+            { text: "Rely on the engineering team to restrict AI permissions manually", fact: `<span class="incorrect">Incorrect.</span>Manual controls are prone to gaps and can’t scale with evolving AI integrations and dynamic access paths.` },
+            { text: "Treat AI agents as first-class identities and analyze their access risk", fact: `<span class="correct">Correct!</span>Manage the lifecycle of AI agents with automated identity governance and enforce access certifications..` },
             { text: "Wait until AI usage policies are finalized across the org", fact: `<span class="incorrect">Incorrect.</span>Policy development takes time, and sensitive data could be exposed in the meantime` }
         ],
         correctAnswer: 2
@@ -157,8 +157,8 @@ This morning, they issued a press release announcing a product that directly com
         question: "What’s the best course of action?",
         options: [
             { text: "Block all external file sharing across the enterprise", fact: `<span class="incorrect">Incorrect.</span>Overly restrictive policies disrupt productivity, push users to shadow IT, and don’t address root causes.` },
-            { text: "Trust team managers to manually review file-sharing behavior", fact: `<span class="incorrect">Incorrect!</span>Manual oversight is inconsistent and scales poorly in fast-moving, cross-functional environments.` },
-            { text: "Implement automated detection and alerting for sensitive file", fact: `<span class="correct">Correct.</span>Adopting a solution that can detect, alert and respond to external file sharing reduces exposure risk.` },
+            { text: "Trust team managers to manually review file-sharing behavior", fact: `<span class="incorrect">Incorrect.</span>Manual oversight is inconsistent and scales poorly in fast-moving, cross-functional environments.` },
+            { text: "Implement automated detection and alerting for sensitive file", fact: `<span class="correct">Correct!</span>Adopting a solution that can detect, alert and respond to external file sharing reduces exposure risk.` },
             { text: "Wait until quarterly audits to assess external exposure", fact: `<span class="incorrect">Incorrect.</span>Delayed detection increases the risk of data leakage, compliance violations, and reputational damage.` }
         ],
         correctAnswer: 2
@@ -182,7 +182,7 @@ This morning, they issued a press release announcing a product that directly com
         question: "What’s the best course of action?",
         options: [
             { text: "Wait until the next bi-annual access review to try to identify risky access", fact: `<span class="incorrect">Incorrect.</span>Waiting months can subject your enterprise to unnecessary risk of damage from a breach or malicious activity` },
-            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
+            { text: "Leverage advanced machine learning to analyze identity access relationships and flag odd access", fact: `<span class="correct">Correct!</span>Pinpoint potential security risks or compliance violations to maintain strong security postures and ensure compliance` },
             { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
             { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
         ],
