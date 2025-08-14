@@ -1159,7 +1159,8 @@ header {
     transition: all 0.2s;
 }
 
-.stage-button.completed:hover .tag{
+.stage-button.completed:hover .tag,
+.stage-button.completed .tag{
     opacity: 1;
     transition: all 0.2s;
 }
