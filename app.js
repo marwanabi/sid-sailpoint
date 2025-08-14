@@ -18,6 +18,35 @@ class AdventureQuiz {
     
     init() {
         this.showPage('landing');
+        this.setupEventListeners();
+    }
+    
+    setupEventListeners() {
+        // Add click handler for exit button to fade out overlay
+        const exitBtn = document.getElementById('exit');
+        if (exitBtn) {
+            exitBtn.addEventListener('click', () => {
+                const overlay = document.getElementById('sidsailpoint-overlayState');
+                if (overlay) {
+                    overlay.classList.add('animate-fade-out');
+                    setTimeout(() => {
+                        overlay.style.display = 'none';
+                    }, 300); // Match fade-out duration
+                }
+            });
+        }
+        // Add click handlers for stage helper elements to fade in overlay
+        const stageHelpers = document.querySelectorAll('[data-stageHelper]');
+        stageHelpers.forEach(helper => {
+            helper.addEventListener('click', () => {
+                const overlay = document.getElementById('sidsailpoint-overlayState');
+                if (overlay) {
+                    overlay.style.display = 'block';
+                    overlay.classList.remove('animate-fade-out');
+                    overlay.classList.add('animate-fade-in');
+                }
+            });
+        });
     }
     
     // Navigation
@@ -93,6 +122,7 @@ class AdventureQuiz {
         const svgStages = document.querySelectorAll('#Layer_1 [data-stage]');
         this.quizState.stages.forEach(stage => {
             const svgElement = document.querySelector(`#Layer_1 [data-stage="${stage.id}"]`);
+            const helperElement = document.querySelector(`[data-stageHelper="${stage.id}"]`);
             if (svgElement) {
                 // Clear existing classes
                 svgElement.classList.remove('completed', 'locked', 'unlocked');
@@ -113,6 +143,21 @@ class AdventureQuiz {
                 } else {
                     svgElement.style.cursor = 'default';
                     svgElement.onclick = null;
+                }
+            }
+            
+            // Apply the same classes to helper elements
+            if (helperElement) {
+                // Clear existing classes
+                helperElement.classList.remove('completed', 'locked', 'unlocked');
+                
+                // Apply new classes based on state
+                if (stage.completed) {
+                    helperElement.classList.add('completed');
+                } else if (!stage.unlocked) {
+                    helperElement.classList.add('locked');
+                } else {
+                    helperElement.classList.add('unlocked');
                 }
             }
         });

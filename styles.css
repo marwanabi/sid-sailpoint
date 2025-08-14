@@ -51,7 +51,13 @@ body.quiz-completed  #progress-bar{
 
 .btn-hotPink {
     background-color: var(--hotPink);
-    color: var(--white)
+    color: var(--white);
+    transition: all 0.2s;
+}
+
+.btn-hotPink:hover {
+    background-color: #9E007E;
+    transition: all 0.2s;
 }
 
 .sidsailpoint-eyeBrow {
@@ -126,6 +132,7 @@ header {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
+    -webkit-font-smoothing: antialiased;
 }
 
 .hero-title {
@@ -276,7 +283,11 @@ header {
 .sidsailpoint-heroContent h1 {
     color: var(--white);
     font-size: 50px;
-    line-height: 120%;
+    line-height: 100%;
+}
+
+.sidsailpoint-heroContent h1 span{
+    font-size: 28px;
 }
 
 .sidsailpoint-heroContent {
@@ -1184,4 +1195,68 @@ header {
 .stage-button.completed .hideLock{
     opacity: 0;
     transition: all 0.2s;
+}
+
+#map-page{
+    position: relative;
+}
+
+#sidsailpoint-overlayState{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(255,255,255,0.8);
+}
+
+#sidsailpoint-overlayState .flex{
+        background: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+   margin: 0 0 35px;
+}
+
+#sidsailpoint-overlayState>div{
+    background: var(--lightGray);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 24px;
+    box-shadow: 0 0 25px rgba(0, 51, 161, 0.15);
+    padding: 45px 50px;
+    text-align: left;
+}
+
+#sidsailpoint-overlayState>div>div>p{
+    font-size: 16px !important;
+    display: flex
+;
+    line-height: 160%;
+    gap: 15px;
+}
+
+#sidsailpoint-overlayState>div>div{
+    border-radius: 20px;
+background: var(--white);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+#sidsailpoint-overlayState>div>div:last-of-type{
+    margin-bottom: 35px;
+}
+
+#sidsailpoint-overlayState>div>div>p span.poppins-semibold{
+        color: var(--hotPink) !important;
+    font-size: 40px;
+    line-height: 120%;
+}
+
+#sidsailpoint-overlayState p:last-of-type{
+
+    font-size: 14px;
+}
+#sidsailpoint-overlayState p:last-of-type span{
+    color: var(--darkGray);
 }
