@@ -57,7 +57,7 @@ This morning, they issued a press release announcing a product that directly com
         question: "What’s the best course of action?",
         options: [
             { text: "Wait for Acme to reach out about their future plans", fact: `<span class="incorrect">Incorrect.</span>Relying on a now-competing third party to voluntarily relinquish access leaves your systems vulnerable.` },
-            { text: "Immediately revoke all access tied to Acme Solutions", fact: `<span class="correct">correct!</span>Residual partner access poses a clear risk. Cut access now, re-evaluate collaboration later.` },
+            { text: "Immediately revoke all access tied to Acme Solutions", fact: `<span class="correct">Correct!</span>Residual partner access poses a clear risk. Cut access now, re-evaluate collaboration later.` },
             { text: "Revoke access from the most privileged users first, and monitor the rest", fact: `<span class="incorrect">Incorrect.</span>Identities need to be addressed uniformly to eliminate exposure.` },
             { text: "Wait for internal project sponsors to align before making changes", fact: `<span class="incorrect">Incorrect.</span>Risk escalation demands proactive access decisions. Governance shouldn’t stall behind politics or process.` }
         ],
@@ -82,7 +82,7 @@ This morning, they issued a press release announcing a product that directly com
         question: "What’s the best course of action?",
         options: [
             { text: "Leave all current access in place until their manager submits a change request", fact: `<span class="incorrect">Incorrect.</span>This reactive approach delays resolution and keeps high-risk access alive. Relying on manual requests introduces unnecessary risks` },
-            { text: "Launch an access certification campaign and use AI to recommend least-privilege roles", fact: `<span class="correct">correct!</span>This allows you to quickly surface outliers and use identity intelligence to streamline access based on job function.` },
+            { text: "Launch an access certification campaign and use AI to recommend least-privilege roles", fact: `<span class="correct">Correct!</span>This allows you to quickly surface outliers and use identity intelligence to streamline access based on job function.` },
             { text: "Reassign the user to a generic “engineering” role and hope it resolves overlap", fact: `<span class="incorrect">Incorrect.</span>Role assumptions without validation often miss context-specific permissions and don't address lingering access.` },
             { text: "Wait until the next quarterly review to revisit the user’s access", fact: `<span class="incorrect">Incorrect.</span>Known risks shouldn’t sit idle. Access reviews need to happen in real-time when red flags emerge.` }
         ],
