@@ -159,7 +159,7 @@ header {
 
 /* Layout */
 .sidsailpoint-landingScreen .flex {
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     height: 100%;
     gap: 76px;
@@ -319,6 +319,7 @@ header {
     width: 100%;
     /* height: 400px; */
     object-fit: cover;
+    margin-top: 100px;
 }
 
 .image-overlay {
@@ -934,9 +935,10 @@ header {
     /* filter: brightness(1.2) saturate(1.3) hue-rotate(90deg); */
 }
 
-[data-stage].locked {
-    filter: brightness(0.5) saturate(0.3) grayscale(1);
-    cursor: not-allowed;
+[data-stage].locked,
+[data-stage].completed {
+    /* filter: brightness(0.5) saturate(0.3) grayscale(1); */
+    cursor: not-allowed !important;
 }
 
 [data-stage].unlocked {
@@ -964,6 +966,7 @@ header {
 #map-page {
     background-image: url(assets/sidSailPoint-mapBG.png);
     background-size: cover;
+    height: 100%;
 }
 
 #map-page svg {
@@ -1134,4 +1137,39 @@ header {
 
 .results-social--icon a img {
     width: 16px;
+}
+
+.stage-button .tag{
+    opacity: 0;
+    transition: all 0.2s;
+} 
+.stage-button.unlocked:hover .tag{
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.stage-button.completed:hover .tag{
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.hide{
+    opacity:0;
+    transition: all 0.2s;
+}
+
+.stage-button.completed .hide{
+    opacity:1;
+    transition: all 0.2ss;
+}
+
+.stage-button.unlocked .hideNumber{
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.stage-button.unlocked .hideLock,
+.stage-button.completed .hideLock{
+    opacity: 0;
+    transition: all 0.2s;
 }
