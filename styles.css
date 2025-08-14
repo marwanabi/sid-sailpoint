@@ -1196,6 +1196,10 @@ color: var(--cobalt);
     transition: all 0.2s;
 }
 
+.hideNumber{
+    opacity: 0;
+}
+
 .stage-button.unlocked .hideLock,
 .stage-button.completed .hideLock{
     opacity: 0;
@@ -1264,4 +1268,8 @@ background: var(--white);
 }
 #sidsailpoint-overlayState p:last-of-type span{
     color: var(--darkGray);
+}
+
+svg foreignObject {
+    display: none;
 }
