@@ -1065,6 +1065,17 @@ header {
     margin-top: 35px;
 }
 
+#back-btn-question{
+    margin-top: 35px;
+        gap: 10px;
+    line-height: 80%;
+    padding: 10px 19px;
+}
+
+#back-btn-question svg{
+    transform: rotate(180deg);
+}
+
 /* result */
 #results-page{
     position: fixed;

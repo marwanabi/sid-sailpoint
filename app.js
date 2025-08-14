@@ -137,8 +137,17 @@ class AdventureQuiz {
         }
         
         // Reset state
-        this.selectedAnswer = null;
-        this.showResult = false;
+        // Check if this stage was already answered
+        const wasAnswered = this.quizState.answers.hasOwnProperty(this.currentStage);
+        
+        // Set state based on whether question was answered
+        if (wasAnswered) {
+            this.selectedAnswer = this.quizState.answers[this.currentStage];
+            this.showResult = true;
+        } else {
+            this.selectedAnswer = null;
+            this.showResult = false;
+        }
         
         // Update scenario content
         const scenarioText = document.getElementById('scenario-text');
@@ -178,12 +187,23 @@ class AdventureQuiz {
                     </div>
                 `).join('')}
             </div>
-            <button id="continue-btn-question" class="btn btn-outline poppins-semibold" style="display: none;">Continue Adventure <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
+            <div class="question-buttons">
+                <button id="back-btn-question" class="btn btn-outline poppins-semibold" style="display: none;" onclick="app.goBackFromQuestion()">
+                <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M15.9063 5.47581L11.6385 1.0018C11.5648 0.922376 11.4755 0.859018 11.3762 0.815691C11.2768 0.772363 11.1696 0.75 11.0613 0.75C10.9529 0.75 10.8457 0.772363 10.7464 0.815691C10.6471 0.859018 10.5578 0.922376 10.4841 1.0018C10.3304 1.16701 10.245 1.38425 10.245 1.60986C10.245 1.83546 10.3304 2.0527 10.4841 2.21791L13.3488 5.22085H0.957292C0.738148 5.23422 0.532362 5.33069 0.381917 5.49056C0.231472 5.65044 0.147705 5.86169 0.147705 6.0812C0.147705 6.30071 0.231472 6.51196 0.381917 6.67184C0.532362 6.83171 0.738148 6.92818 0.957292 6.94155H13.351L10.4905 9.94875C10.3368 10.114 10.2514 10.3312 10.2514 10.5568C10.2514 10.7824 10.3368 10.9997 10.4905 11.1649C10.5642 11.2443 10.6535 11.3076 10.7528 11.351C10.8521 11.3943 10.9593 11.4167 11.0677 11.4167C11.176 11.4167 11.2832 11.3943 11.3826 11.351C11.4819 11.3076 11.5712 11.2443 11.6449 11.1649L15.9127 6.69086C16.065 6.52479 16.1489 6.30736 16.1477 6.08208C16.1465 5.8568 16.0603 5.64027 15.9063 5.47581V5.47581Z"
 									fill="#0071CE" />
 							</svg>
+                            Back</button>
+                <button id="continue-btn-question" class="btn btn-outline poppins-semibold" style="display: none;">Continue <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M15.9063 5.47581L11.6385 1.0018C11.5648 0.922376 11.4755 0.859018 11.3762 0.815691C11.2768 0.772363 11.1696 0.75 11.0613 0.75C10.9529 0.75 10.8457 0.772363 10.7464 0.815691C10.6471 0.859018 10.5578 0.922376 10.4841 1.0018C10.3304 1.16701 10.245 1.38425 10.245 1.60986C10.245 1.83546 10.3304 2.0527 10.4841 2.21791L13.3488 5.22085H0.957292C0.738148 5.23422 0.532362 5.33069 0.381917 5.49056C0.231472 5.65044 0.147705 5.86169 0.147705 6.0812C0.147705 6.30071 0.231472 6.51196 0.381917 6.67184C0.532362 6.83171 0.738148 6.92818 0.957292 6.94155H13.351L10.4905 9.94875C10.3368 10.114 10.2514 10.3312 10.2514 10.5568C10.2514 10.7824 10.3368 10.9997 10.4905 11.1649C10.5642 11.2443 10.6535 11.3076 10.7528 11.351C10.8521 11.3943 10.9593 11.4167 11.0677 11.4167C11.176 11.4167 11.2832 11.3943 11.3826 11.351C11.4819 11.3076 11.5712 11.2443 11.6449 11.1649L15.9127 6.69086C16.065 6.52479 16.1489 6.30736 16.1477 6.08208C16.1465 5.8568 16.0603 5.64027 15.9063 5.47581V5.47581Z"
+									fill="#0071CE" />
+							</svg>
+            </div>
+            
 </button>
         `;
         
@@ -217,6 +237,12 @@ class AdventureQuiz {
             scenarioText.style.display = 'none';
             questionSection.style.display = 'block';
             questionSection.classList.add('animate-fade-in');
+            const backBtn = document.getElementById('back-btn-question');
+            backBtn.style.display = 'inline-flex';
+            // If this question was already answered, show the results
+            if (this.showResult) {
+                this.applyAnswerResults();
+            }
         }, 300); // Match the fade-out duration
     }
     
@@ -284,6 +310,9 @@ class AdventureQuiz {
             this.quizState.isCompleted = true;
             document.body.classList.add('quiz-completed');
         }
+        // Unlock next stage immediately when answer is selected
+        this.unlockNextStage(this.currentStage);
+        
         this.saveQuizState();
         
         this.showResult = true;
@@ -302,6 +331,10 @@ class AdventureQuiz {
                 btn.classList.add('incorrect');
                 // btn.querySelector('.option-icon').textContent = '❌';
             }
+            // Disable further interaction
+            btn.onclick = null;
+            btn.style.cursor = 'default';
+            btn.classList.add('disabled');
         });
         
         // Show result card
@@ -313,14 +346,69 @@ class AdventureQuiz {
         continueBtn.onclick = () => app.continueAdventure();
         continueBtn.classList.add('animate-fade-in');
     }
+
+    applyAnswerResults() {
+        const question = questions.find(q => q.stage === this.currentStage);
+        const isCorrect = this.selectedAnswer === question.correctAnswer;
+        
+        // Update UI to show results and facts
+        document.querySelectorAll('.option-button').forEach((btn, index) => {
+            const optionFact = btn.querySelector('.option-fact');
+            if (optionFact) {
+                optionFact.style.display = 'block';
+            }
+            
+            if (index === question.correctAnswer) {
+                btn.classList.add('correct');
+                btn.querySelector('.option-icon').textContent = '✅';
+            } else {
+                btn.classList.add('incorrect');
+                btn.querySelector('.option-icon').textContent = '❌';
+            }
+            
+            // Mark selected answer
+            if (index === this.selectedAnswer) {
+                btn.classList.add('selected');
+            }
+            
+            // Disable further interaction
+            btn.onclick = null;
+            btn.style.cursor = 'default';
+            btn.classList.add('disabled');
+        });
+        
+        // Show result card
+        const resultCard = document.getElementById('result-card');
+        document.getElementById('result-icon').textContent = isCorrect ? '🎉' : '💭';
+        document.getElementById('result-title').textContent = isCorrect ? 'Correct!' : 'Not quite right';
+        document.getElementById('result-description').textContent = isCorrect 
+            ? "Your wisdom shines through! You've unlocked the next stage."
+            : "Every adventure teaches us something. The journey continues!";
+        
+        resultCard.style.display = 'block';
+        
+        // Show continue button
+        const continueBtn = document.getElementById('continue-btn-question');
+        continueBtn.style.display = 'inline-flex';
+        continueBtn.onclick = () => app.continueAdventure();
+
+        // Show back button
+        const backBtn = document.getElementById('back-btn-question');
+        backBtn.style.display = 'inline-flex';
+    }
+
+    goBackFromQuestion() {
+       // Navigate back to map
+        this.navigateTo('map');
+    }
     
     continueAdventure() {
         if (this.currentStage < 7) {
-            this.unlockNextStage(this.currentStage);
+            // this.unlockNextStage(this.currentStage);
             this.navigateTo('map');
         } else {
             // Complete the final stage and show results
-            this.unlockNextStage(this.currentStage);
+            // this.unlockNextStage(this.currentStage);
             this.navigateTo('results');
         }
     }
