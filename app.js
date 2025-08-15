@@ -36,14 +36,30 @@ class AdventureQuiz {
             });
         }
         // Add click handlers for stage helper elements to fade in overlay
-        const stageHelpers = document.querySelectorAll('[data-stageHelper]');
+         const stageHelpers = document.querySelectorAll('[data-stagehelper]');
         stageHelpers.forEach(helper => {
             helper.addEventListener('click', () => {
+                console.log('Stage helper clicked!');
+                const stageNumber = helper.getAttribute('data-stagehelper');
+                console.log('Stage number:', stageNumber);
+                const question = questions.find(q => q.id == stageNumber);
+                console.log('Found question:', question);
+                
                 const overlay = document.getElementById('sidsailpoint-overlayState');
-                if (overlay) {
+                console.log('Overlay element:', overlay);
+                if (overlay && question) {
+                    // Set the overlay content to the matching question's innerHTML
+                    const overlayContent = overlay.querySelector('.text-container');
+                    console.log('Overlay content element:', overlayContent);
+                    if (overlayContent) {
+                        overlayContent.innerHTML = question.helpcopy;
+                    }
+                    
                     overlay.style.display = 'block';
                     overlay.classList.remove('animate-fade-out');
                     overlay.classList.add('animate-fade-in');
+                } else {
+                    console.log('Missing overlay or question!');
                 }
             });
         });

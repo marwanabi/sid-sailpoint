@@ -1246,7 +1246,15 @@ color: var(--cobalt);
    margin: 0 0 35px;
 }
 
-#sidsailpoint-overlayState>div{
+#exit{
+        display: flex
+;
+    flex-direction: row-reverse;
+    position: absolute;
+    right: 50px;
+}
+
+#sidsailpoint-overlayState .overlay-content{
     background: var(--lightGray);
     position: absolute;
     top: 50%;
@@ -1256,9 +1264,12 @@ color: var(--cobalt);
     box-shadow: 0 0 25px rgba(0, 51, 161, 0.15);
     padding: 45px 50px;
     text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-#sidsailpoint-overlayState>div>div>p{
+#sidsailpoint-overlayState .overlay-content .text-content p{
     font-size: 16px !important;
     display: flex
 ;
@@ -1266,27 +1277,34 @@ color: var(--cobalt);
     gap: 15px;
 }
 
-#sidsailpoint-overlayState>div>div{
+#sidsailpoint-overlayState .stat{
     border-radius: 20px;
 background: var(--white);
     padding: 25px;
     margin-bottom: 25px;
 }
-#sidsailpoint-overlayState>div>div:last-of-type{
+#sidsailpoint-overlayState .stat:last-of-type{
     margin-bottom: 35px;
 }
 
-#sidsailpoint-overlayState>div>div>p span.poppins-semibold{
+#sidsailpoint-overlayState .stat p{
+        display: flex
+;
+    align-items: center;
+    gap: 15px;
+}
+
+#sidsailpoint-overlayState .stat p span.poppins-semibold{
         color: var(--hotPink) !important;
     font-size: 40px;
     line-height: 120%;
 }
 
-#sidsailpoint-overlayState p:last-of-type{
+#sidsailpoint-overlayState .source{
 
     font-size: 14px;
 }
-#sidsailpoint-overlayState p:last-of-type span{
+#sidsailpoint-overlayState .stat p:last-of-type span{
     color: var(--darkGray);
 }
 
