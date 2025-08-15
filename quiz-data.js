@@ -13,7 +13,7 @@ const questions = [
     {
         id: 1,
         stage: 1,
-        img:`<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
+        img: `<img src="assets/sidSailPoint-inheritedChaos.png"/>`,
         eyeBrow: 'inherited chaos',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -33,12 +33,26 @@ const questions = [
             { text: "Use automated discovery to scan systems and surface machine accounts", fact: `<span class="correct">Correct!</span>Machine Identity Security automates discovery helping you gain visibility and control.` },
             { text: "Defer discovery until after the next project phase to avoid disruption", fact: `<span class="incorrect">Incorrect.</span>Every day of delay increases your exposure to misused or orphaned machine accounts.` }
         ],
+        helpcopy: `
+	<div class="flex">
+		<p class="sidsailpoint-eyeBrow">Inherited chaos often starts with machines</p>
+		</div>
+		<div class="stat">
+			<p><span class="poppins-semibold">72%</span><span>of identity professionals say machine identities are more difficult to manage than human identities.</span></p>
+		</div>
+		<div class="stat">
+			<p><span class="poppins-semibold">88%</span><span>are unsure about deleting machine identities believing something may break as a result.</span></p>
+		</div>
+
+		<p class="source"><span class="poppins-semibold">Source:</span> SailPoint’s 2024 special report “Machine identity crisis: The challenges of manual processes and hidden risks.”</p>
+	
+        `,
         correctAnswer: 2
     },
     {
         id: 2,
         stage: 2,
-        img:`<img src="assets/sidsailpoint-trustedpartner.png"/>`,
+        img: `<img src="assets/sidsailpoint-trustedpartner.png"/>`,
         eyeBrow: 'Trusted partner turned competitor',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -61,12 +75,27 @@ This morning, they issued a press release announcing a product that directly com
             { text: "Revoke access from the most privileged users first, and monitor the rest", fact: `<span class="incorrect">Incorrect.</span>Identities need to be addressed uniformly to eliminate exposure.` },
             { text: "Wait for internal project sponsors to align before making changes", fact: `<span class="incorrect">Incorrect.</span>Risk escalation demands proactive access decisions. Governance shouldn’t stall behind politics or process.` }
         ],
+        helpcopy: `
+	<div class="flex">
+		<p class="sidsailpoint-eyeBrow">Manual processes often lead to security issues</p>
+		
+		</div>
+		<div class="stat">
+			<p><span class="poppins-semibold">51%</span><span>of organizations admit inappropriate access has been assigned to a non-employee, and another 16% don’t even know. </span></p>
+		</div>
+		<div class="stat">
+			<p><span class="poppins-semibold">83%</span><span>require a manual process to remove access from a non-employee when the working relationship ends.</span></p>
+		</div>
+
+		<p class="source"><span class="poppins-semibold">Source:</span> “Manual approach to managing non-employee identities leads to security issues”</p>
+
+        `,
         correctAnswer: 1
     },
     {
         id: 3,
         stage: 3,
-        img:`<img src="assets/sidsailpoint-ghost.png"/>`,
+        img: `<img src="assets/sidsailpoint-ghost.png"/>`,
         eyeBrow: 'Ghosts of Access Past',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -86,12 +115,24 @@ This morning, they issued a press release announcing a product that directly com
             { text: "Reassign the user to a generic “engineering” role and hope it resolves overlap", fact: `<span class="incorrect">Incorrect.</span>Role assumptions without validation often miss context-specific permissions and don't address lingering access.` },
             { text: "Wait until the next quarterly review to revisit the user’s access", fact: `<span class="incorrect">Incorrect.</span>Known risks shouldn’t sit idle. Access reviews need to happen in real-time when red flags emerge.` }
         ],
+        helpcopy: `
+	<div class="flex">
+		<p class="sidsailpoint-eyeBrow">Did you know that…</p>
+		
+		</div>
+		<div class="stat">
+			<p><span class="poppins-semibold">76%</span><span>of organizations struggle with detecting toxic access combinations.</span></p>
+		</div>
+
+		<p class="source"><span class="poppins-semibold">Source:</span> KuppingerCole, Leadership Compass: Identity Governance & Administration, 2024</p>
+
+        `,
         correctAnswer: 1
     },
     {
         id: 4,
         stage: 4,
-        img:`<img src="assets/sidsailpoint-identity.png"/>`,
+        img: `<img src="assets/sidsailpoint-identity.png"/>`,
         eyeBrow: 'Identity loop',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -111,12 +152,25 @@ This morning, they issued a press release announcing a product that directly com
             { text: "Integrate HR systems with ILM workflows and automate lifecycle triggers", fact: `<span class="correct">Correct!</span>Real-time integration ensures accurate provisioning and prompt access removal based on lifecycle events.` },
             { text: "Address only offboarding issues and wait to automate onboarding later", fact: `<span class="incorrect">Incorrect.</span>Partial solutions expose the business to risk. Lifecycle automation must be end-to-end.` }
         ],
+        helpcopy: `
+
+	<div class="flex">
+		<p class="sidsailpoint-eyeBrow">Manual processes create blind spots</p>
+		
+		</div>
+		<div class="stat">
+			<p><span class="poppins-semibold">65%</span><span>of organizations lacked automated onboarding/offboarding processes—leading to orphaned accounts and excess privileges.</span></p>
+		</div>
+
+		<p class="source"><span class="poppins-semibold">Source:</span> Avatier Identity & Access Management Blog, April 23, 2025</p>
+
+        `,
         correctAnswer: 2
     },
     {
         id: 5,
         stage: 5,
-        img:`<img src="assets/sidSailPoint-ai.png"/>`,
+        img: `<img src="assets/sidSailPoint-ai.png"/>`,
         eyeBrow: 'ai overreach',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -136,12 +190,25 @@ This morning, they issued a press release announcing a product that directly com
             { text: "Treat AI agents as first-class identities and analyze their access risk", fact: `<span class="correct">Correct!</span>Manage the lifecycle of AI agents with automated identity governance and enforce access certifications..` },
             { text: "Wait until AI usage policies are finalized across the org", fact: `<span class="incorrect">Incorrect.</span>Policy development takes time, and sensitive data could be exposed in the meantime` }
         ],
+        helpcopy: `
+
+	<div class="flex">
+		<p class="sidsailpoint-eyeBrow">The new reality of AI agents’ overreach</p>
+		
+		</div>
+		<div class="stat">
+			<p><span class="poppins-semibold">80%</span><span>of security and IT professionals said AI agents have performed unintended actions of accessing and sharing inappropriate data.</span></p>
+		</div>
+
+		<p class="source"><span class="poppins-semibold">Source:</span> AI agents: The new attack surface, A global survey of security and IT professionals and executives, SailPoint 2025</p>
+
+        `,
         correctAnswer: 2
     },
     {
         id: 6,
         stage: 6,
-        img:`<img src="assets/sidSailPoint-link.png"/>`,
+        img: `<img src="assets/sidSailPoint-link.png"/>`,
         eyeBrow: 'anyone with the link',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -161,12 +228,25 @@ This morning, they issued a press release announcing a product that directly com
             { text: "Implement automated detection and alerting for sensitive file", fact: `<span class="correct">Correct!</span>Adopting a solution that can detect, alert and respond to external file sharing reduces exposure risk.` },
             { text: "Wait until quarterly audits to assess external exposure", fact: `<span class="incorrect">Incorrect.</span>Delayed detection increases the risk of data leakage, compliance violations, and reputational damage.` }
         ],
+        helpcopy: `
+
+	<div class="flex">
+		<p class="sidsailpoint-eyeBrow">Security incidents can leave you exposed</p>
+		
+		</div>
+		<div class="stat">
+			<p><span class="poppins-semibold">46%</span><span>of all breaches involved customer personal identifiable information (PII), which can include tax identification (ID) numbers, emails, phone numbers, and home addresses.</span></p>
+		</div>
+
+		<p class="source"><span class="poppins-semibold">Source:</span> Cost of a Data Breach Report 2024</p>
+
+        `,
         correctAnswer: 2
     },
     {
         id: 7,
         stage: 7,
-        img:`<img src="assets/sidSailPoint-anomaly.png"/>`,
+        img: `<img src="assets/sidSailPoint-anomaly.png"/>`,
         eyeBrow: 'anomaly Detected!',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -186,6 +266,22 @@ This morning, they issued a press release announcing a product that directly com
             { text: "Grab a coffee and buckle up for some long days manually reviewing access to find anomalies.", fact: `<span class="incorrect">Incorrect.</span>Manual processes do not scale sufficiently to protect access and avoid breaches` },
             { text: "Play it safe, you don’t want to disable access to a critical application the executive team uses often.", fact: `<span class="incorrect">Incorrect.</span>Ignoring things leaves you exposed. Balance security and productivity with identity analytics` }
         ],
+        helpcopy: `
+
+	<div class="flex">
+		<p class="sidsailpoint-eyeBrow">Identifying outlier behavior is key</p>
+		
+		</div>
+        <div class="stat">
+			<p><span class="poppins-semibold">97%</span><span>of IDSA survey respondents this year reported AI/ML will be beneficial for identity-related use cases in their organizations.</span></p>
+		</div>
+		<div class="stat">
+			<p><span class="poppins-semibold">71%</span><span>named the top use case they perceived as having the most benefit was ‘Identifying outlier behaviors’.</span></p>
+		</div>
+
+		<p class="source"><span class="poppins-semibold">Source:</span> IDSA - 2024 Trends in Identity Security</p>
+
+        `,
         correctAnswer: 1
     }
 ];
@@ -195,8 +291,8 @@ const quizResults = [
         title: "Identity Novice",
         image: `<img src="assets/sidsailpoint-identityNovice.png"/>`,
         description: "You’re starting to recognize identity risks, but many threats remain hidden. There’s much more to uncover.",
-        descTitle:'Early in the journey',
-        descSecond:'You have proven your instincts. Now sharpen your knowledge.',
+        descTitle: 'Early in the journey',
+        descSecond: 'You have proven your instincts. Now sharpen your knowledge.',
         icon: "🌱",
         minScore: 0,
         maxScore: 1
@@ -205,8 +301,8 @@ const quizResults = [
         title: "Identity Apprentice",
         image: `<img src="assets/sidsailpoint-identityApprentice.png"/>`,
         description: "You’ve identified some key risks, but several were missed. Your instincts are forming—AI can help guide the way.",
-        descTitle:'Making progress',
-        descSecond:'Well played. But the journey to mastery never stops.',
+        descTitle: 'Making progress',
+        descSecond: 'Well played. But the journey to mastery never stops.',
         icon: "🗺️",
         minScore: 2,
         maxScore: 2
@@ -215,8 +311,8 @@ const quizResults = [
         title: "Identity Explorer",
         image: `<img src="assets/sidsailpoint-identityExplorer.png"/>`,
         description: "You caught most issues and show growing skill in detecting risky identity situations. You're on your way to mastery.",
-        descTitle:'Solid understanding',
-        descSecond:'You crushed the challenge. Now take your knowledge even further.',
+        descTitle: 'Solid understanding',
+        descSecond: 'You crushed the challenge. Now take your knowledge even further.',
         icon: "⚔️",
         minScore: 3,
         maxScore: 3
@@ -225,8 +321,8 @@ const quizResults = [
         title: "Identity Strategist",
         image: `<img src="assets/sidsailpoint-identityStrategist.png"/>`,
         description: "Your decisions reflect deep knowledge of identity security. You’re ready to lead change with AI-powered tools.",
-        descTitle:'Strong Performance',
-        descSecond:'Game mastered. Time to assess your real-world impact.',
+        descTitle: 'Strong Performance',
+        descSecond: 'Game mastered. Time to assess your real-world impact.',
         icon: "👑",
         minScore: 4,
         maxScore: 5
@@ -235,8 +331,8 @@ const quizResults = [
         title: "Identity Guardian",
         image: `<img src="assets/sidsailpoint-identityGuardian.png"/>`,
         description: "You flawlessly uncovered every risk—your instincts, accuracy, and timing are elite. You’re ready to shape the future of identity security.",
-        descTitle:'Top-tier expertise',
-        descSecond:'You crushed the challenge. Now take your program even further.',
+        descTitle: 'Top-tier expertise',
+        descSecond: 'You crushed the challenge. Now take your program even further.',
         icon: "🌟",
         minScore: 6,
         maxScore: 7
