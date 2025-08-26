@@ -1002,6 +1002,10 @@ color: var(--cobalt);
     margin: 0 auto;
 }
 
+.howto-button{
+    cursor: pointer;
+}
+
 /* scenario-page */
 #scenario-page {
     background-image: url(assets/sidSailPoint-questionBG.png);
