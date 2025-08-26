@@ -110,7 +110,8 @@ header {
 
 .sidsailpoint-navigation {
     background-color: var(--white);
-    padding: 20px 58px;
+    /* padding: 20px 58px; */
+     padding: 10px 58px; /* smaller */
     justify-content: space-between;
     align-items: center;
     max-width: 1330px;
@@ -281,7 +282,8 @@ header {
     background-position: center bottom;
     background-repeat: no-repeat;
     height: 100%;
-    padding: 100px 90px;
+    /* padding: 100px 90px; */
+    padding: 70px 90px; /* smaller*/
     position: relative;
 }
 
@@ -324,7 +326,8 @@ header {
     font-size: 18px;
     line-height: 160%;
     margin-top: 50px;
-    padding: 50px;
+    /* padding: 50px; */
+    padding: 40px; /* smaller */
 }
 
 .sidsailpoint-heroDescription--subtitle {
