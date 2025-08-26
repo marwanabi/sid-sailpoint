@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1425 847" style="enable-background:new 0 0 1425 847;" xml:space="preserve">
+<style type="text/css">
+		@keyframes rotate {
+				from {
+					transform:scale(0) rotate(270deg);
+                    opacity: 0;
+				}
+	
+				to {
+					transform:scale(1) rotate(0);
+                    opacity: 1;
+				}
+			}
+	.st0{fill:#2D2D2D;}
+	.st1{fill:#0071CE;}
+	.st2{fill:none;stroke:#54C0E8;stroke-width:0.25;stroke-miterlimit:10;}
+	.st3{fill:#54C0E8;}
+	.st4{fill:#FFFFFF;}
+
+	.starBig, .starBigCircle circle, .starSquare path{
+				transform-box: fill-box;
+				transform-origin: center;
+				animation: rotate 2s cubic-bezier(.17,.67,.22,1.02) alternate infinite forwards;
+                opacity:0;
+			}
+			.starBig.starBig1,
+			#sid_x5F_starGroup2.starBigCircle circle:nth-child(1),
+			#sid_x5F_starGroup2.starBigCircle circle:nth-child(3){
+				animation-delay: 0.5s;
+			}
+	
+			.starBig.starBig2,
+			#sid_x5F_starGroup3.starBigCircle circle:nth-child(2),
+			#sid_x5F_starGroup3.starBigCircle circle:nth-child(4){
+				animation-delay: 0.8s;
+			}
+	
+			.starBig.starBig4,
+			#sid_x5F_starGroup4.starBigCircle circle:nth-child(1),
+			#sid_x5F_starGroup4.starBigCircle circle:nth-child(3){
+				animation-delay: 1s;
+			}
+</style>
+<path id="sid_x5F_starBig3" class="st1 starBig starBig3" d="M414.1,77.9c4.4,1.3,5.4,2.3,6.7,6.7c1.3-4.4,2.3-5.4,6.7-6.7c-4.4-1.3-5.4-2.3-6.7-6.7
+	C419.5,75.6,418.5,76.6,414.1,77.9z"/>
+<path id="sid_x5F_starBig1" class="st1 starBig starBig1" d="M0.7,623.4c4.4,1.3,5.4,2.3,6.7,6.7c1.3-4.4,2.3-5.4,6.7-6.7c-4.4-1.3-5.4-2.3-6.7-6.7
+	C6.2,621.1,5.2,622.2,0.7,623.4z"/>
+<path id="sid_x5F_starBig4" class="st1 starBig starBig4" d="M266.5,21.6c6.4,1.8,7.9,3.3,9.7,9.7c1.8-6.4,3.3-7.9,9.7-9.7c-6.4-1.8-7.9-3.3-9.7-9.7
+	C274.3,18.3,272.9,19.7,266.5,21.6z"/>
+<g id="sid_x5F_squareGroup1" class="starSquare">
+	<path class="st2" d="M491,565.9h-12l2.6-12h12L491,565.9z"/>
+	<path class="st2" d="M34.2,846.1h-12l2.6-12h12L34.2,846.1z"/>
+</g>
+<path id="sid_x5F_starBig2" class="st3 starBig starBig2" d="M972.3,35.2c6.4,1.8,7.9,3.3,9.7,9.7c1.8-6.4,3.3-7.9,9.7-9.7c-6.4-1.8-7.9-3.3-9.7-9.7
+	C980.1,31.9,978.7,33.4,972.3,35.2z"/>
+<g id="sid_x5F_starGroup2" class="starBigCircle">
+	<circle class="st4" cx="320.2" cy="728" r="3.7"/>
+	<circle class="st3" cx="1396.9" cy="260.3" r="2"/>
+	<circle class="st4" cx="1423" cy="60.2" r="2"/>
+	<circle class="st4" cx="19.4" cy="13.2" r="2"/>
+</g>
+<g id="sid_x5F_starGroup1" class="starBigCircle">
+	<circle class="st4" cx="1392.9" cy="661.9" r="3.7"/>
+	<circle class="st4" cx="552.7" cy="2.8" r="2"/>
+	<circle class="st4" cx="496.3" cy="785.6" r="2"/>
+</g>
+<g id="sid_x5F_starGroup4" class="starBigCircle">
+	<circle class="st1" cx="19.4" cy="354" r="2"/>
+	<circle class="st1" cx="738.4" cy="801" r="2"/>
+</g>
+<g id="sid_x5F_starGroup3" class="starBigCircle">
+	<circle class="st3" cx="781.8" cy="75.4" r="2"/>
+	<circle class="st3" cx="76.8" cy="20.5" r="2"/>
+	<circle class="st4" cx="977.5" cy="789.6" r="2"/>
+	<circle class="st1" cx="172.4" cy="805" r="2"/>
+</g>
+</svg>
