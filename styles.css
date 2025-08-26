@@ -11,7 +11,7 @@
     --darkGray: #415364;
     --lightGray: #F2F5F7;
     --cobalt: #0033A1;
-    --hotPink: #CC27B0;
+    --hotPink: #D60EB5;
 }
 
 body {
@@ -311,6 +311,7 @@ header {
 }
 
 .sidsailpoint-heroContent {
+    flex: 1; /* smaller */
     max-width: 808px;
     width: 100%;
 }
@@ -318,6 +319,10 @@ header {
 .sidsailpoint-heroContent span {
     display: block;
     margin-bottom: 30px;
+}
+
+.sidsailpoint-heroContent span:last-child{
+    margin-bottom: 0; /* smaller */
 }
 
 .sidsailpoint-heroDescription {
@@ -349,6 +354,7 @@ header {
 
 .hero-img {
     width: 100%;
+    max-width: 334px; /* smaller */
     /* height: 400px; */
     object-fit: cover;
     margin-top: 100px;
@@ -377,7 +383,8 @@ header {
     color: var(--white);
     font-size: 18px;
     line-height: 160%;
-    padding: 30px 0;
+    /* padding: 30px 0; */
+    padding: 20px 0; /* smaller */
 }
 
 /* Steps grid */

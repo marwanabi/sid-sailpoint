@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-    .hero-grid {
+    /* .hero-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -37,5 +37,76 @@
     .btn {
         width: 100%;
         max-width: 300px;
+    } */
+}
+
+@media (max-width: 1150px) {
+    #landing-page.sidsailpoint-landingScreen {
+        padding: 60px;
+    }
+
+    #landing-page .sidsailpoint-landingScreen .flex {
+        gap: 50px;
+    }
+
+    #landing-page .sidsailpoint-heroDescription {
+        margin-top: 30px;
+    }
+
+    #landing-page .sidsailpoint-heroContent h1 {
+        font-size: 45px;
+    }
+
+    #landing-page .sidsailpoint-heroContent span,
+    #landing-page .sidsailpoint-ctaDescription {
+        font-size: 16px;
+    }
+
+    #landing-page .sidsailpoint-heroContent span {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1050px) {
+    #landing-page.sidsailpoint-landingScreen {
+        height: 100%;
+    }
+
+    #landing-page.sidsailpoint-landingScreen .flex {
+        flex-direction: column;
+    }
+
+    #landing-page .hero-img {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #landing-page.sidsailpoint-landingScreen {
+        padding: 40px 35px;
+    }
+
+    #landing-page .sidsailpoint-heroContent h1,
+    #landing-page .sidsailpoint-heroContent h1 span {
+        font-size: 28px;
+        line-height: 120%;
+    }
+
+    #landing-page .sidsailpoint-heroContent h1 br{
+        display: none;
+    }
+    #landing-page .sidsailpoint-heroDescription{
+        padding: 25px;
+    }
+
+    #landing-page .sidsailpoint-heroContent span{
+        font-size: 14px;
+        line-height: 160%;
+        margin-bottom: 15px;
+    }
+
+    #landing-page .sidsailpoint-ctaTitle{
+        font-size: 28px;
+        line-height: 120%;
     }
 }
