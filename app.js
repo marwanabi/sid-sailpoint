@@ -237,7 +237,7 @@ class AdventureQuiz {
             <div id="options-container" class="options-container">
                 ${question.options.map((option, index) => `
                     <div class="option-button" onclick="app.selectAnswer(${index})">
-                        <div class="option-content">
+                        <div class="option-content flex">
                             <div class="option-text">
                             
                         <div class="option-letter"></div>
