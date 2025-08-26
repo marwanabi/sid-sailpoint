@@ -172,6 +172,8 @@ header {
     justify-content: center;
     height: 100%;
     gap: 76px;
+    position: relative;
+    z-index: 1;
 }
 
 .content-wrapper {
@@ -274,12 +276,25 @@ header {
 /* Hero */
 
 .sidsailpoint-landingScreen {
-    background-image: url(assets/sidSailPoint-introBG.png);
+    background-image: url(assets/sidSailpoint_blueGradientBG.png);
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
     height: 100%;
     padding: 100px 90px;
+    position: relative;
+}
+
+.sidsailpoint-landingScreen .sidsailpoint-starBG,
+#scenario-page .sidsailpoint-starBG,
+.result-graphic .sidsailpoint-starBG{
+        position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 .sidsailpoint-heroContent h1 {
@@ -774,12 +789,13 @@ color: var(--cobalt);
 }
 
 .results-card .result-graphic{
-    background: url(assets/sidsailpoint-resultBG.png);
+    background: url(assets/sidSailpoint_purpleGradientBG.png);
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     padding: 100px 0;
     width: 885px;
+    position: relative;
 }
 
 .results-title {
@@ -1008,10 +1024,11 @@ color: var(--cobalt);
 
 /* scenario-page */
 #scenario-page {
-    background-image: url(assets/sidSailPoint-questionBG.png);
+    background-image: url(assets/sidSailpoint_blueGradientBG.png);
     background-size: cover;
     height: 100%;
     padding: 100px 60px;
+    position: relative;
 }
 
 #scenario-page .scenario-content {
@@ -1027,6 +1044,8 @@ color: var(--cobalt);
     align-items: flex-start;
     justify-content: center;
     max-width: 100%;
+        position: relative;
+    z-index: 1;
 }
 
 #scenario-page .scenario-description {
