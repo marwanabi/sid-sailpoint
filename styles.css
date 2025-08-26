@@ -712,8 +712,15 @@ color: var(--cobalt);
     line-height: 160%;
 }
 
+.option-button .option-content{
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
 .option-fact {
     /* text-transform: capitalize; */
+    font-size: 12px;
 }
 
 .option-fact span.correct {
@@ -962,7 +969,7 @@ color: var(--cobalt);
 }
 
 [data-stage].unlocked {
-    filter: brightness(1) saturate(1);
+    /* filter: brightness(1) saturate(1); */
 }
 
 .hoverState {
@@ -1211,7 +1218,8 @@ color: var(--cobalt);
     transition: all 0.2ss;
 }
 
-.stage-button.unlocked .hideNumber{
+.stage-button.unlocked .hideNumber,
+.stage-button.completed .hideNumber{
     opacity: 1;
     transition: all 0.2s;
 }

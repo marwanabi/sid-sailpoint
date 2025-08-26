@@ -35,7 +35,7 @@ const questions = [
         ],
         helpcopy: `
 	<div class="flex">
-		<p class="sidsailpoint-eyeBrow">Inherited chaos often starts with machines</p>
+		<p class="sidsailpoint-eyeBrow poppins-semibold">Inherited chaos often starts with machines</p>
 		</div>
 		<div class="stat">
 			<p><span class="poppins-semibold">72%</span><span>of identity professionals say machine identities are more difficult to manage than human identities.</span></p>
@@ -77,7 +77,7 @@ This morning, they issued a press release announcing a product that directly com
         ],
         helpcopy: `
 	<div class="flex">
-		<p class="sidsailpoint-eyeBrow">Manual processes often lead to security issues</p>
+		<p class="sidsailpoint-eyeBrow poppins-semibold">Manual processes often lead to security issues</p>
 		
 		</div>
 		<div class="stat">
@@ -117,7 +117,7 @@ This morning, they issued a press release announcing a product that directly com
         ],
         helpcopy: `
 	<div class="flex">
-		<p class="sidsailpoint-eyeBrow">Did you know that…</p>
+		<p class="sidsailpoint-eyeBrow poppins-semibold">Did you know that…</p>
 		
 		</div>
 		<div class="stat">
@@ -155,7 +155,7 @@ This morning, they issued a press release announcing a product that directly com
         helpcopy: `
 
 	<div class="flex">
-		<p class="sidsailpoint-eyeBrow">Manual processes create blind spots</p>
+		<p class="sidsailpoint-eyeBrow poppins-semibold">Manual processes create blind spots</p>
 		
 		</div>
 		<div class="stat">
@@ -193,7 +193,7 @@ This morning, they issued a press release announcing a product that directly com
         helpcopy: `
 
 	<div class="flex">
-		<p class="sidsailpoint-eyeBrow">The new reality of AI agents’ overreach</p>
+		<p class="sidsailpoint-eyeBrow poppins-semibold">The new reality of AI agents’ overreach</p>
 		
 		</div>
 		<div class="stat">
@@ -231,7 +231,7 @@ This morning, they issued a press release announcing a product that directly com
         helpcopy: `
 
 	<div class="flex">
-		<p class="sidsailpoint-eyeBrow">Security incidents can leave you exposed</p>
+		<p class="sidsailpoint-eyeBrow poppins-semibold">Security incidents can leave you exposed</p>
 		
 		</div>
 		<div class="stat">
@@ -269,7 +269,7 @@ This morning, they issued a press release announcing a product that directly com
         helpcopy: `
 
 	<div class="flex">
-		<p class="sidsailpoint-eyeBrow">Identifying outlier behavior is key</p>
+		<p class="sidsailpoint-eyeBrow poppins-semibold">Identifying outlier behavior is key</p>
 		
 		</div>
         <div class="stat">
