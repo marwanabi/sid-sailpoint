@@ -1,12 +1,12 @@
 // Quiz data
 const stages = [
-    { id: 1, name: "Ancient Castle", icon: "", unlocked: true, completed: false },
-    { id: 2, name: "Mystic Forest", icon: "", unlocked: false, completed: false },
-    { id: 3, name: "Crystal Cave", icon: "", unlocked: false, completed: false },
-    { id: 4, name: "Dragon's Lair", icon: "", unlocked: false, completed: false },
-    { id: 5, name: "Floating Islands", icon: "", unlocked: false, completed: false },
-    { id: 6, name: "Phoenix Temple", icon: "", unlocked: false, completed: false },
-    { id: 7, name: "Golden Treasure", icon: "", unlocked: false, completed: false },
+    { id: 1, name: "Inherited chaos", unlocked: true, completed: false },
+    { id: 2, name: "Trusted partner turned competitor", unlocked: false, completed: false },
+    { id: 3, name: "Ghosts of access part", unlocked: false, completed: false },
+    { id: 4, name: "Identity loop", unlocked: false, completed: false },
+    { id: 5, name: "AI overreach", unlocked: false, completed: false },
+    { id: 6, name: "Anyone with the link", unlocked: false, completed: false },
+    { id: 7, name: "anomaly detected", unlocked: false, completed: false },
 ];
 
 const questions = [
