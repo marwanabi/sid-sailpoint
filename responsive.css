@@ -117,12 +117,16 @@
 }
 
 @media (max-width: 768px) {
-    #progress-bar{
+    .progress-dots--mobile{
+        display: block;
+    }
+
+    #progress-bar p,.progress-dots{
         display: none;
     }
     #landing-page.sidsailpoint-landingScreen,
     #scenario-page {
-        padding: 40px 35px;
+        padding: 40px 20px;
     }
 
     #landing-page .sidsailpoint-heroContent h1,
@@ -156,18 +160,15 @@
     height: calc(100vh - 61px);
 }
     #sidsailpoint-workProcess-page .content-wrapper{
-        display: block;
-        padding: 42px 35px;
+        padding: 42px 20px;
     }
 
     #sidsailpoint-workProcess-page.sidsailpoint-workProcess h2{
-        text-align: center;
         padding-bottom: 25px;
     }
 
     #sidsailpoint-workProcess-page .cta-section{
         padding: 40px 25px;
-        text-align: center;
     }
 
     #sidsailpoint-workProcess-page ul{

@@ -35,6 +35,34 @@ class AdventureQuiz {
                 }
             });
         }
+
+        // Add click handler for workProcess page button to fade out the page
+        const workProcessPage = document.getElementById('sidsailpoint-workProcess-page');
+        if (workProcessPage) {
+            const workProcessBtn = workProcessPage.querySelector('button');
+            if (workProcessBtn) {
+                workProcessBtn.addEventListener('click', () => {
+                    workProcessPage.classList.add('animate-fade-out');
+                    setTimeout(() => {
+                        workProcessPage.style.display = 'none';
+                    }, 300); // Match fade-out duration
+                });
+            }
+        }
+
+        // Add click handlers for howto-button to fade in workProcess page
+        const howtoButtons = document.querySelectorAll('.howto-button');
+        howtoButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const workProcessPage = document.getElementById('sidsailpoint-workProcess-page');
+                if (workProcessPage) {
+                    workProcessPage.style.display = 'block';
+                    workProcessPage.classList.remove('animate-fade-out');
+                    workProcessPage.classList.add('animate-fade-in');
+                }
+            });
+        });
+
         // Add click handlers for stage helper elements to fade in overlay
          const stageHelpers = document.querySelectorAll('[data-stagehelper]');
         stageHelpers.forEach(helper => {
@@ -83,6 +111,12 @@ class AdventureQuiz {
             progressBar.style.opacity = '1';
             this.renderProgressBar();
         }
+
+        // Show/hide sidsailpoint-workProcess-page based on map-page navigation
+        const workProcessPage = document.getElementById('sidsailpoint-workProcess-page');
+        if (workProcessPage) {
+            workProcessPage.style.display = page === 'map' ? 'block' : 'none';
+        }
         
         // Show current page
         document.getElementById(`${page}-page`).style.display = 'block';
@@ -113,14 +147,17 @@ class AdventureQuiz {
     renderProgressBar() {
         const completedQuestions = this.quizState.stages.filter(stage => stage.completed).length;
         const progressPercentage = (completedQuestions / 7) * 100;
-        const stageIcons = ["🏰", "🌲", "💎", "🐉", "☁️", "🔥", "🏆"];
+        const currentQuestion = completedQuestions;
         
         const progressDots = document.querySelector('.progress-dots');
-        progressDots.innerHTML = `
-            <div class="progress-line">
-                <div class="progress-line-fill" style="width: ${progressPercentage}%"></div>
+        const progressDotsMobile = document.querySelector('.progress-dots--mobile');
+        progressDotsMobile.innerHTML = `
+        <div class="progress-counter">
+                <span class="poppins-semibold">${currentQuestion > 7 ? 7 : currentQuestion}/7</span>
             </div>
-            ${stageIcons.map((icon, index) => {
+                `;
+        progressDots.innerHTML = `
+            ${Array.from({ length: 7 }, (_, index) => {
                 const isCompleted = (index + 1) <= completedQuestions;
                 return `
                     <div class="progress-dot ${isCompleted ? 'completed' : 'incomplete'}">
@@ -305,6 +342,9 @@ class AdventureQuiz {
             backBtn.style.display = 'inline-flex';
             // If this question was already answered, show the results
             if (this.showResult) {
+                const continueBtn = document.getElementById('continue-btn-question');
+                continueBtn.style.display = 'inline-flex';
+                continueBtn.onclick = () => app.continueAdventure();
                 this.applyAnswerResults();
             }
         }, 300); // Match the fade-out duration
@@ -463,13 +503,27 @@ class AdventureQuiz {
 
     goBackFromQuestion() {
        // Navigate back to map
-        this.navigateTo('map');
+        if (this.showResult) {
+            this.navigateTo('scenario', this.currentStage);
+        } else {
+            // Navigate back to map for unanswered questions
+            this.navigateTo('map');
+            const workProcessPage = document.getElementById('sidsailpoint-workProcess-page');
+            if (workProcessPage) {
+                workProcessPage.style.display = 'none';
+            }
+        }
     }
     
     continueAdventure() {
         if (this.currentStage < 7) {
             // this.unlockNextStage(this.currentStage);
             this.navigateTo('map');
+            // Hide work process page when continuing from question
+            const workProcessPage = document.getElementById('sidsailpoint-workProcess-page');
+            if (workProcessPage) {
+                workProcessPage.style.display = 'none';
+            }
         } else {
             // Complete the final stage and show results
             // this.unlockNextStage(this.currentStage);
