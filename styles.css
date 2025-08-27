@@ -38,7 +38,8 @@ body.quiz-completed  #progress-bar{
 }
 
 .page {
-    height: calc(100vh - 101px);
+    /* height: calc(100vh - 101px); */
+    height: calc(100vh - 80.7px); /* smaller */
 }
 
 .flex {
@@ -251,7 +252,7 @@ header {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    /* margin-top: 2rem;  smaller */
 }
 
 /* Feature list */
@@ -296,7 +297,6 @@ header {
     left: 0;
     z-index: 0;
     width: 100%;
-    object-fit: cover;
     height: 100%;
 }
 
@@ -525,9 +525,24 @@ header {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
 }
 
-.stage-button.completed {
-    /* border-color: #27ae60;
-    background: #f8fff9; */
+.stage-button.unlocked rect.map-icon{
+      display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    /* box-shadow: 0 0 1px rgba(0, 0, 0, 0); */
+    -webkit-animation-name: hvr-pulse-shrink;
+    animation-name: hvr-pulse-shrink;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    transform-origin: center;
+    transform-box: fill-box;
 }
 
 .stage-button.locked {
@@ -650,25 +665,29 @@ header {
 }
 
 .question-header {
-    margin-bottom: 35px;
+    /* margin-bottom: 35px; */
+    margin-bottom: 20px; /* smaller */
 }
 
 .question-header .question-title{
 font-size: 28px;
 color: var(--cobalt);
+line-height: 120%;
 }
 
 .option-button {
     background: white;
     border: 1px solid #DAE1E9;
     border-radius: 12px;
-    padding: 22px;
+    /* padding: 22px; */
+    padding: 18px; /* smaller */
     text-align: left;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: flex-start;
-    width: 350px;
+    /* width: 350px; */
+    width: 48%; /* smaller */
     height: 219px;
 
 }
@@ -1038,14 +1057,17 @@ color: var(--cobalt);
     background-image: url(assets/sidSailpoint_blueGradientBG.png);
     background-size: cover;
     height: 100%;
-    padding: 100px 60px;
+    min-height: calc(100vh - 80.7px);/* smaller */
+    /* padding: 100px 60px; */
+    padding: 60px;/* smaller */
     position: relative;
 }
 
 #scenario-page .scenario-content {
     background-color: var(--lightGray);
     border-radius: 24px;
-    padding: 30px 36px;
+    /* padding: 30px 36px; */
+    padding: 30px; /* smaller */
     box-shadow: 0 0 25px rgba(0, 51, 161, 0.5);
     max-width: 800px;
     width: 100%;
@@ -1064,7 +1086,8 @@ color: var(--cobalt);
 }
 
 #scenario-page .sidsailpoint-eyeBrow {
-    margin-bottom: 35px;
+    /* margin-bottom: 35px; */
+    margin-bottom: 15px; /* smaller */
 }
 
 #scenario-page .scenario-description h3 {
@@ -1077,11 +1100,13 @@ color: var(--cobalt);
     color: var(--darkGray);
     font-size: 16px;
     line-height: 160%;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    margin-bottom: 20px; /* smaller */
 }
 
 #scenario-page .scenario-description>p:last-of-type {
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
+    margin-bottom: 40px; /* smaller */
 }
 
 #scenario-page .sidsailpoint-context {
@@ -1090,7 +1115,9 @@ color: var(--cobalt);
     border-radius: 20px;
     gap: 40px;
     justify-content: center;
-    padding: 40px;
+    /* padding: 40px; */
+    padding: 20px; /* smaller */
+    margin-bottom: 2rem; /* smaller */
 }
 
 #scenario-page .sidsailpoint-context p span {
@@ -1102,13 +1129,34 @@ color: var(--cobalt);
 }
 
 #scenario-page #scenario-img {
-    max-width: 500px;
-    width: 100%;
-    margin-top: 50px;
+    /* max-width: 500px; */
+    
+        max-width: 572px; /* smaller */
+    /* width: 100%; */ /* smaller */
+    /* margin-top: 50px; */ /* smaller */
+    position: relative;
 }
 
 #scenario-page #scenario-img img {
     width: 100%;
+    /* position: absolute;
+    right: -36px; */
+    z-index: -1;
+    -webkit-animation-name: hvr-hang-sink, hvr-hang;
+  animation-name: hvr-hang-sink, hvr-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+    /* smaller */
 }
 
 #scenario-page .button-group {
