@@ -533,8 +533,8 @@ header {
     /* box-shadow: 0 0 1px rgba(0, 0, 0, 0); */
     -webkit-animation-name: hvr-pulse-shrink;
     animation-name: hvr-pulse-shrink;
-    -webkit-animation-duration: 0.3s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
@@ -1131,7 +1131,7 @@ line-height: 120%;
 #scenario-page #scenario-img {
     /* max-width: 500px; */
     
-        max-width: 572px; /* smaller */
+       /* max-width: 572px;  smaller */
     /* width: 100%; */ /* smaller */
     /* margin-top: 50px; */ /* smaller */
     position: relative;

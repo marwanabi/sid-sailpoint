@@ -13,7 +13,7 @@ const questions = [
     {
         id: 1,
         stage: 1,
-        img: `<img src="assets/sidSailPoint-inheritedChaos.png" style="max-width:572px"/>`,
+        img: `<img src="assets/sidSailPoint-inheritedChaos.png" style="max-width:510px"/>`,
         eyeBrow: 'inherited chaos',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -52,7 +52,7 @@ const questions = [
     {
         id: 2,
         stage: 2,
-        img: `<img src="assets/sidsailpoint-trustedpartner.png"/>`,
+        img: `<img src="assets/sidsailpoint-trustedpartner.png" style="max-width:566px"/>`,
         eyeBrow: 'Trusted partner turned competitor',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -132,7 +132,7 @@ This morning, they issued a press release announcing a product that directly com
     {
         id: 4,
         stage: 4,
-        img: `<img src="assets/sidsailpoint-identity.png"/>`,
+        img: `<img src="assets/sidsailpoint-identity.png" style="max-width:460px"/>`,
         eyeBrow: 'Identity loop',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
