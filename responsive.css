@@ -136,7 +136,6 @@
 
 #scenario-page #scenario-img{
     max-width: 500px;
-            margin-right: -50px;
         z-index: -1;
 }
 }
@@ -359,6 +358,10 @@ animation: scale-in 0.5s ease-out;
     right: -8px;
     padding: 12px;
     border-radius: 50%;
+ }
+
+ #scenario-page #scenario-img{
+    margin: 0 auto 50px;
  }
 }
 
