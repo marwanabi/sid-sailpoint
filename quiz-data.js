@@ -170,7 +170,7 @@ This morning, they issued a press release announcing a product that directly com
     {
         id: 5,
         stage: 5,
-        img: `<img src="assets/sidSailPoint-ai.png"/>`,
+        img: `<img src="assets/sailpoint_ai--mobile.png"/>`,
         eyeBrow: 'ai overreach',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>
@@ -208,7 +208,7 @@ This morning, they issued a press release announcing a product that directly com
     {
         id: 6,
         stage: 6,
-        img: `<img src="assets/sidSailPoint-link.png"/>`,
+        img: `<img src="assets/sailpoint_link--mobile.png"/>`,
         eyeBrow: 'anyone with the link',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>

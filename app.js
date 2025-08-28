@@ -91,6 +91,21 @@ class AdventureQuiz {
                 }
             });
         });
+        // Add click handlers for social share buttons
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('#share-facebook')) {
+                e.preventDefault();
+                this.shareOnFacebook();
+            }
+            if (e.target.closest('#share-twitter')) {
+                e.preventDefault();
+                this.shareOnTwitter();
+            }
+            if (e.target.closest('#share-linkedin')) {
+                e.preventDefault();
+                this.shareOnLinkedIn();
+            }
+        });
     }
     
     // Navigation
