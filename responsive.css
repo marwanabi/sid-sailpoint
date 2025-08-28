@@ -40,19 +40,6 @@
   }
 }
 
-    @keyframes keyframe18 {
-        0% {
-            transform-origin: 35.5px 47px
-        }
-
-        55.55556% {
-            transform-origin: 35.5px 47px
-        }
-
-        100% {
-            transform-origin: 35.5px 47px
-        }
-    }
 
     @keyframes keyframe4 {
         0% {
@@ -104,6 +91,18 @@
         }
     }
 
+
+    @keyframes scale-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 @media (max-width: 1380px){
 #scenario-page .options-container{
     gap: 15px;
@@ -139,6 +138,9 @@
 
     #landing-page .sidsailpoint-heroContent span {
         margin-bottom: 20px;
+    }
+    #result-image img {
+    max-width: 400px;
     }
 }
 
@@ -177,6 +179,21 @@
 
     #landing-page .hero-img {
         margin-top: 0;
+    }
+
+    #results-page{
+        position: relative;
+    }
+
+    .results-card{
+        display: block;
+    }
+
+    .results-card .result-graphic{
+        max-width: 100%;
+    }
+    #results-description{
+        margin: 50px 0;
     }
 }
 
@@ -256,4 +273,20 @@
     .option-fact{
         margin-top: 20px;
     }
+
+    #result-image img{
+        max-width: 290px;
+    }
+    .results-title {
+    font-size: 28px;
+ }
+ .results-card .result-graphic{
+    padding: 40px 20px;
+ }
+ #results-description{
+    padding: 0 20px;
+ }
+ body.quiz-completed nav.sidsailpoint-navigation.flex{
+    flex-direction: row;
+ }
 }

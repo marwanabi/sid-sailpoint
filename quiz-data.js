@@ -289,7 +289,8 @@ This morning, they issued a press release announcing a product that directly com
 const quizResults = [
     {
         title: "Identity Novice",
-        image: `<img src="assets/sidsailpoint-identityNovice.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityNovice.svg"/>`,
+        thumbnail: `<img src="assets/sidsailpoint-identityNovice-thumbnail.png"/>`,
         description: "You’re starting to recognize identity risks, but many threats remain hidden. There’s much more to uncover.",
         descTitle: 'Early in the journey',
         descSecond: 'You have proven your instincts. Now sharpen your knowledge.',
@@ -299,7 +300,8 @@ const quizResults = [
     },
     {
         title: "Identity Apprentice",
-        image: `<img src="assets/sidsailpoint-identityApprentice.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityApprentice.svg"/>`,
+        thumbnail: `<img src="assets/sidsailpoint-identityApprentice-thumbnail.png"/>`,
         description: "You’ve identified some key risks, but several were missed. Your instincts are forming—AI can help guide the way.",
         descTitle: 'Making progress',
         descSecond: 'Well played. But the journey to mastery never stops.',
@@ -309,7 +311,8 @@ const quizResults = [
     },
     {
         title: "Identity Explorer",
-        image: `<img src="assets/sidsailpoint-identityExplorer.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityExplorer.svg"/>`,
+        thumbnail: `<img src="assets/sidsailpoint-identityExplorer-thumbnail.png"/>`,
         description: "You caught most issues and show growing skill in detecting risky identity situations. You're on your way to mastery.",
         descTitle: 'Solid understanding',
         descSecond: 'You crushed the challenge. Now take your knowledge even further.',
@@ -319,7 +322,8 @@ const quizResults = [
     },
     {
         title: "Identity Strategist",
-        image: `<img src="assets/sidsailpoint-identityStrategist.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityStrategist.svg"/>`,
+        thumbnail: `<img src="assets/sidsailpoint-identityStrategist-thumbnail.png"/>`,
         description: "Your decisions reflect deep knowledge of identity security. You’re ready to lead change with AI-powered tools.",
         descTitle: 'Strong Performance',
         descSecond: 'Game mastered. Time to assess your real-world impact.',
@@ -329,7 +333,8 @@ const quizResults = [
     },
     {
         title: "Identity Guardian",
-        image: `<img src="assets/sidsailpoint-identityGuardian.png"/>`,
+        image: `<img src="assets/sidsailpoint-identityGuardian.svg"/>`,
+        thumbnail: `<img src="assets/sidsailpoint-identityGuardian-thumbnail.png"/>`,
         description: "You flawlessly uncovered every risk—your instincts, accuracy, and timing are elite. You’re ready to shape the future of identity security.",
         descTitle: 'Top-tier expertise',
         descSecond: 'You crushed the challenge. Now take your program even further.',

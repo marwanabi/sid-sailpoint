@@ -543,13 +543,17 @@ header {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
 }
 
-.stage-button.unlocked[data-stagehelper]>g {
+.stage-button.unlocked[data-stagehelper]>g{
     animation-name: keyframe4;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
     animation-play-state: running;
     animation-iteration-count: infinite;
+}
+
+.animate-scale-in {
+    animation: scale-in 0.4s ease-out;
 }
 
 .stage-button.unlocked rect.map-icon {
@@ -820,6 +824,10 @@ header {
 }
 
 /* Result card */
+#result-image img{
+    max-width: 500px;
+    width: 100%;
+}
 .result-card {
     background: white;
     border-radius: 12px;
@@ -856,10 +864,19 @@ header {
     background: url(assets/sidSailpoint_bg-result.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    flex: 1.5;
+    height: 100%;
     text-align: center;
     padding: 100px 0;
-    width: 885px;
+    max-width: 885px;
     position: relative;
+
+    /* smaller */
+        display: flex
+;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 .results-title {
@@ -1248,6 +1265,7 @@ header {
 
 #results-page .content-wrapper {
     max-width: 100%;
+    height: 100%;
 }
 
 #results-page .sidsailpoint-eyeBrow,
@@ -1259,6 +1277,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 }
 
 .results-description--grayBG {
@@ -1282,7 +1301,10 @@ header {
 }
 
 #results-description {
-    max-width: calc(100% - 885px);
+    /* max-width: calc(100% - 885px); */
+    flex: 1;
+    margin-top: 100px;
+    padding: 0 30px;
     width: 100%;
 }
 
@@ -1293,6 +1315,13 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s;
+}
+#results-description a:hover{
+    text-decoration-color: var(--blue);
+    transition: all 0.3s;
 }
 
 #results-description a span {
@@ -1305,7 +1334,7 @@ header {
 }
 
 #results-links a:first-of-type {
-    line-height: 70px
+    margin-bottom: 30px;
 }
 
 .results-social {
@@ -1324,6 +1353,11 @@ header {
 
 .results-social--icon a img {
     width: 16px;
+}
+
+.results-social--icon .results-social--twittericon{
+    width: 16px !important;
+    height: 16px !important;
 }
 
 .stage-button .tag {

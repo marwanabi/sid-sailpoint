@@ -558,6 +558,7 @@ class AdventureQuiz {
         const resultIconLarge = document.getElementById('result-icon-large');
         const resultTitleLarge = document.getElementById('result-title-large');
         const resultImage = document.getElementById('result-image');
+        const resultPreview = document.getElementById('result-preview');
         const resultDescriptionDesc = document.getElementById('results-description--desc');
         const resultDescriptiontitle = document.getElementById('results-description--title');
         const resultDescriptionSecond = document.getElementById('results-description--second');
@@ -565,14 +566,16 @@ class AdventureQuiz {
         resultIconLarge.textContent = result.icon;
         resultTitleLarge.textContent = result.title;
         resultImage.innerHTML = result.image;
+        resultPreview.innerHTML = result.thumbnail;
         resultDescriptionDesc.textContent = result.description;
         resultDescriptiontitle.textContent = result.descTitle;
         resultDescriptionSecond.textContent = result.descSecond;
         
         // Add fade-in effects
-        resultIconLarge.classList.add('animate-fade-in');
+        // resultIconLarge.classList.add('animate-fade-in');
+        resultImage.classList.add('animate-scale-in');
         resultTitleLarge.classList.add('animate-fade-in');
-        resultImage.classList.add('animate-fade-in');
+        // resultImage.classList.add('animate-fade-in');
         resultDescriptiontitle.classList.add('animate-fade-in');
         resultDescriptionSecond.classList.add('animate-fade-in');
         
