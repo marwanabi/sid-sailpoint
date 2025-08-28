@@ -125,7 +125,11 @@ class AdventureQuiz {
         }
         
         // Show current page
-        document.getElementById(`${page}-page`).style.display = 'block';
+        if (page === 'scenario') {
+            document.getElementById(`${page}-page`).style.display = 'flex';
+        } else {
+            document.getElementById(`${page}-page`).style.display = 'block';
+        }
         this.currentPage = page;
         
         // Initialize page-specific content
@@ -185,7 +189,11 @@ class AdventureQuiz {
             // Handle Layer_2
             const svgElement2 = document.querySelector(`#Layer_2 [data-stage="${stage.id}"]`);
             const helperElement = document.querySelector(`[data-stageHelper="${stage.id}"]`);
+            // Handle helper elements for both layers
+            const helperElement1 = document.querySelector(`#Layer_1 [data-stageHelper="${stage.id}"]`);
+            const helperElement2 = document.querySelector(`#Layer_2 [data-stageHelper="${stage.id}"]`);
             const svgElements = [svgElement1, svgElement2];
+            const helperElements = [helperElement1, helperElement2];
             svgElements.forEach((svgElement, layerIndex) => {
                 if (svgElement) {
                     // Clear existing classes
@@ -224,17 +232,21 @@ class AdventureQuiz {
             
             // Apply the same classes to helper elements
             if (helperElement) {
-                // Clear existing classes
-                helperElement.classList.remove('completed', 'locked', 'unlocked');
-                
-                // Apply new classes based on state
-                if (stage.completed) {
-                    helperElement.classList.add('completed');
-                } else if (!stage.unlocked) {
-                    helperElement.classList.add('locked');
-                } else {
-                    helperElement.classList.add('unlocked');
+                helperElements.forEach((helperElement) => {
+                if (helperElement) {
+                    // Clear existing classes
+                    helperElement.classList.remove('completed', 'locked', 'unlocked');
+                    
+                    // Apply new classes based on state
+                    if (stage.completed) {
+                        helperElement.classList.add('completed');
+                    } else if (!stage.unlocked) {
+                        helperElement.classList.add('locked');
+                    } else {
+                        helperElement.classList.add('unlocked');
+                    }
                 }
+            });
             }
         });
         
