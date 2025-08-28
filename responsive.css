@@ -353,6 +353,13 @@ animation: scale-in 0.5s ease-out;
  body.quiz-completed nav.sidsailpoint-navigation.flex{
     flex-direction: row;
  }
+ #exit{
+    background: var(--white);
+    top: -13px;
+    right: -8px;
+    padding: 12px;
+    border-radius: 50%;
+ }
 }
 
 @media (max-width: 390px){
