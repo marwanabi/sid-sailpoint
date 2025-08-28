@@ -103,6 +103,17 @@
     }
 }
 
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(90%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 1380px){
 #scenario-page .options-container{
     gap: 15px;
@@ -145,6 +156,17 @@
 }
 
 @media (max-width: 1070px) {
+    .mobile-map{
+        display: block;
+    }
+    .desktop-map{
+        display: none;
+    }
+
+
+    #scenario-page .scenario-content{
+        animation: slide-up 0.5s linear;
+    }
     #scenario-page .scenario-description p{
         font-size: 14px;
     }
@@ -157,6 +179,8 @@
     #scenario-page #scenario-img{
         max-width: 350px;
         margin-bottom: 50px;
+
+animation: scale-in 0.5s ease-out;
     }
 
     .option-button{
@@ -238,7 +262,9 @@
         line-height: 120%;
     }
 #sidsailpoint-workProcess-page{
-    height: calc(100vh - 61px);
+    /* height: calc(100vh - 61px); */
+            height: 100vh;
+        position: fixed;
 }
     #sidsailpoint-workProcess-page .content-wrapper{
         padding: 42px 20px;
