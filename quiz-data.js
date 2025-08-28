@@ -13,7 +13,7 @@ const questions = [
     {
         id: 1,
         stage: 1,
-        img: `<img src="assets/sidSailPoint-inheritedChaos.png" style="max-width:510px"/>`,
+        img: `<img src="assets/sailpoint_chaos--mobile.png" style="max-width:510px"/>`,
         eyeBrow: 'inherited chaos',
         scenario: `
         <h3 class="poppins-semibold">Scenario</h3>

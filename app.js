@@ -624,6 +624,9 @@ class AdventureQuiz {
         resultDescriptionDesc.textContent = result.description;
         resultDescriptiontitle.textContent = result.descTitle;
         resultDescriptionSecond.textContent = result.descSecond;
+
+        // Update meta tags for social sharing
+        this.updateMetaImage();
         
         // Add fade-in effects
         // resultIconLarge.classList.add('animate-fade-in');
@@ -689,6 +692,68 @@ class AdventureQuiz {
             isCompleted: false
         };
         this.navigateTo('landing');
+    }
+
+    // Social Share Functions
+    updateMetaImage() {
+        if (!this.quizState.isCompleted) return;
+        
+        const result = this.getResult();
+        const baseUrl = window.location.origin;
+        const shareText = `I just completed the Adventure Quiz and got: ${result.title}! ${result.description}`;
+        
+        // Update meta tags for social sharing
+        this.updateMetaTag('property', 'og:title', `Adventure Quiz Results - ${result.title}`);
+        this.updateMetaTag('property', 'og:description', result.description);
+        this.updateMetaTag('property', 'og:image', result.thumbnail || `${baseUrl}/src/assets/hero-adventure.jpg`);
+        this.updateMetaTag('property', 'og:url', window.location.href);
+        this.updateMetaTag('name', 'twitter:card', 'summary_large_image');
+        this.updateMetaTag('name', 'twitter:title', `Adventure Quiz Results - ${result.title}`);
+        this.updateMetaTag('name', 'twitter:description', result.description);
+        this.updateMetaTag('name', 'twitter:image', result.thumbnail || `${baseUrl}/src/assets/hero-adventure.jpg`);
+    }
+    
+    updateMetaTag(attribute, value, content) {
+        let tag = document.querySelector(`meta[${attribute}="${value}"]`);
+        if (!tag) {
+            tag = document.createElement('meta');
+            tag.setAttribute(attribute, value);
+            document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+    }
+    
+    shareOnFacebook() {
+        if (!this.quizState.isCompleted) return;
+        
+        const result = this.getResult();
+        const shareText = `I just completed the Adventure Quiz and got: ${result.title}! ${result.description}`;
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent(shareText);
+        
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank', 'width=600,height=400');
+    }
+    
+    shareOnTwitter() {
+        if (!this.quizState.isCompleted) return;
+        
+        const result = this.getResult();
+        const shareText = `I just completed the Adventure Quiz and got: ${result.title}! ${result.description}`;
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent(shareText);
+        
+        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'width=600,height=400');
+    }
+    
+    shareOnLinkedIn() {
+        if (!this.quizState.isCompleted) return;
+        
+        const result = this.getResult();
+        const shareText = `I just completed the Adventure Quiz and got: ${result.title}! ${result.description}`;
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent(shareText);
+        
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&summary=${text}`, '_blank', 'width=600,height=400');
     }
 }
 
