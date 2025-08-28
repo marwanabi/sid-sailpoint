@@ -115,7 +115,13 @@ class AdventureQuiz {
         // Show/hide sidsailpoint-workProcess-page based on map-page navigation
         const workProcessPage = document.getElementById('sidsailpoint-workProcess-page');
         if (workProcessPage) {
-            workProcessPage.style.display = page === 'map' ? 'block' : 'none';
+            if (page === 'map') {
+                workProcessPage.style.display = 'block';
+                workProcessPage.classList.remove('animate-fade-out');
+                workProcessPage.classList.add('animate-fade-in');
+            } else {
+                workProcessPage.style.display = 'none';
+            }
         }
         
         // Show current page

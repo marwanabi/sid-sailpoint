@@ -23,15 +23,15 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-main{
+main {
     position: relative;
 }
 
 body.quiz-completed nav.sidsailpoint-navigation.flex {
     flex-direction: row-reverse;
-    padding: 20px 0 20px 58px;
 }
-body.quiz-completed  #progress-bar{
+
+body.quiz-completed #progress-bar {
     z-index: -1;
 }
 
@@ -43,7 +43,8 @@ body.quiz-completed  #progress-bar{
 
 .page {
     /* height: calc(100vh - 101px); */
-    height: calc(100vh - 80.7px); /* smaller */
+    height: calc(100vh - 80.7px);
+    /* smaller */
 }
 
 .flex {
@@ -117,7 +118,8 @@ header {
 .sidsailpoint-navigation {
     background-color: var(--white);
     /* padding: 20px 58px; */
-     padding: 10px 58px; /* smaller */
+    padding: 10px 58px;
+    /* smaller */
     justify-content: space-between;
     align-items: center;
     max-width: 1330px;
@@ -288,16 +290,18 @@ header {
     background-position: center bottom;
     background-repeat: no-repeat;
     /* height: 100%; */
-    height: calc(100vh - 80.7px);/* smaller*/
+    height: calc(100vh - 80.7px);
+    /* smaller*/
     /* padding: 100px 90px; */
-    padding: 70px 90px; /* smaller*/
+    padding: 70px 90px;
+    /* smaller*/
     position: relative;
 }
 
 .sidsailpoint-landingScreen .sidsailpoint-starBG,
 #scenario-page .sidsailpoint-starBG,
-.result-graphic .sidsailpoint-starBG{
-        position: absolute;
+.result-graphic .sidsailpoint-starBG {
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
@@ -311,12 +315,13 @@ header {
     line-height: 100%;
 }
 
-.sidsailpoint-heroContent h1 span{
+.sidsailpoint-heroContent h1 span {
     font-size: 28px;
 }
 
 .sidsailpoint-heroContent {
-    flex: 1; /* smaller */
+    flex: 1;
+    /* smaller */
     max-width: 808px;
     width: 100%;
 }
@@ -326,8 +331,9 @@ header {
     margin-bottom: 30px;
 }
 
-.sidsailpoint-heroContent span:last-child{
-    margin-bottom: 0; /* smaller */
+.sidsailpoint-heroContent span:last-child {
+    margin-bottom: 0;
+    /* smaller */
 }
 
 .sidsailpoint-heroDescription {
@@ -338,7 +344,8 @@ header {
     line-height: 160%;
     margin-top: 50px;
     /* padding: 50px; */
-    padding: 40px; /* smaller */
+    padding: 40px;
+    /* smaller */
 }
 
 .sidsailpoint-heroDescription--subtitle {
@@ -359,7 +366,8 @@ header {
 
 .hero-img {
     width: 100%;
-    max-width: 334px; /* smaller */
+    max-width: 334px;
+    /* smaller */
     /* height: 400px; */
     object-fit: cover;
     margin-top: 100px;
@@ -389,7 +397,8 @@ header {
     font-size: 18px;
     line-height: 160%;
     /* padding: 30px 0; */
-    padding: 20px 0; /* smaller */
+    padding: 20px 0;
+    /* smaller */
 }
 
 /* Steps grid */
@@ -446,9 +455,9 @@ header {
     gap: 11px;
 }
 
-.progress-dots--mobile{
-        display: none;
-    }
+.progress-dots--mobile {
+    display: none;
+}
 
 .progress-line {
     /* position: absolute;
@@ -534,8 +543,17 @@ header {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
 }
 
-.stage-button.unlocked rect.map-icon{
-      display: inline-block;
+.stage-button.unlocked[data-stagehelper]>g {
+    animation-name: keyframe4;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+.stage-button.unlocked rect.map-icon {
+    display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
@@ -604,9 +622,10 @@ header {
     font-size: 0.9rem;
 } */
 
-#progress-bar p{
+#progress-bar p {
     padding-right: 10px;
 }
+
 .progress-bar-container {
     width: 100%;
     height: 12px;
@@ -678,13 +697,14 @@ header {
 
 .question-header {
     /* margin-bottom: 35px; */
-    margin-bottom: 20px; /* smaller */
+    margin-bottom: 20px;
+    /* smaller */
 }
 
-.question-header .question-title{
-font-size: 28px;
-color: var(--cobalt);
-line-height: 120%;
+.question-header .question-title {
+    font-size: 28px;
+    color: var(--cobalt);
+    line-height: 120%;
 }
 
 .option-button {
@@ -692,14 +712,16 @@ line-height: 120%;
     border: 1px solid #DAE1E9;
     border-radius: 12px;
     /* padding: 22px; */
-    padding: 18px; /* smaller */
+    padding: 18px;
+    /* smaller */
     text-align: left;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: flex-start;
     /* width: 350px; */
-    width: 48%; /* smaller */
+    width: 48%;
+    /* smaller */
     height: 219px;
 
 }
@@ -769,7 +791,7 @@ line-height: 120%;
     line-height: 160%;
 }
 
-.option-button .option-content{
+.option-button .option-content {
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
@@ -830,8 +852,8 @@ line-height: 120%;
     margin-bottom: 1.5rem;
 }
 
-.results-card .result-graphic{
-    background: url(assets/sidSailpoint_purpleGradientBG.png);
+.results-card .result-graphic {
+    background: url(assets/sidSailpoint_bg-result.svg);
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -967,12 +989,12 @@ line-height: 120%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; */
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-        z-index: 1;
+    z-index: 1;
 }
 
 #sidsailpoint-workProcess-page .content-wrapper {
@@ -985,6 +1007,7 @@ line-height: 120%;
 .sidsailpoint-workProcess .content-wrapper>div {
     background-color: var(--white);
     border-radius: 24px;
+    box-shadow: 0 0 20px rgba(0, 51, 161, 0.5);
     max-width: 672px;
     margin: 0 auto;
     padding: 40px 50px;
@@ -1066,18 +1089,20 @@ line-height: 120%;
     margin: 0 auto;
 }
 
-.howto-button{
+.howto-button {
     cursor: pointer;
 }
 
 /* scenario-page */
 #scenario-page {
-    background-image: url(assets/sidSailpoint_blueGradientBG.png);
+    background-image: url(assets/sidSailpoint_bg-question.png);
     background-size: cover;
     height: 100%;
-    min-height: calc(100vh - 80.7px);/* smaller */
+    min-height: calc(100vh - 80.7px);
+    /* smaller */
     /* padding: 100px 60px; */
-    padding: 60px;/* smaller */
+    padding: 60px;
+    /* smaller */
     position: relative;
 }
 
@@ -1085,7 +1110,8 @@ line-height: 120%;
     background-color: var(--lightGray);
     border-radius: 24px;
     /* padding: 30px 36px; */
-    padding: 30px; /* smaller */
+    padding: 30px;
+    /* smaller */
     box-shadow: 0 0 25px rgba(0, 51, 161, 0.5);
     max-width: 800px;
     width: 100%;
@@ -1095,7 +1121,7 @@ line-height: 120%;
     align-items: flex-start;
     justify-content: center;
     max-width: 100%;
-        position: relative;
+    position: relative;
     z-index: 1;
 }
 
@@ -1105,7 +1131,8 @@ line-height: 120%;
 
 #scenario-page .sidsailpoint-eyeBrow {
     /* margin-bottom: 35px; */
-    margin-bottom: 15px; /* smaller */
+    margin-bottom: 15px;
+    /* smaller */
 }
 
 #scenario-page .scenario-description h3 {
@@ -1119,12 +1146,14 @@ line-height: 120%;
     font-size: 16px;
     line-height: 160%;
     /* margin-bottom: 30px; */
-    margin-bottom: 20px; /* smaller */
+    margin-bottom: 20px;
+    /* smaller */
 }
 
 #scenario-page .scenario-description>p:last-of-type {
     /* margin-bottom: 80px; */
-    margin-bottom: 40px; /* smaller */
+    margin-bottom: 40px;
+    /* smaller */
 }
 
 #scenario-page .sidsailpoint-context {
@@ -1134,8 +1163,10 @@ line-height: 120%;
     gap: 40px;
     justify-content: center;
     /* padding: 40px; */
-    padding: 20px; /* smaller */
-    margin-bottom: 2rem; /* smaller */
+    padding: 20px;
+    /* smaller */
+    margin-bottom: 2rem;
+    /* smaller */
 }
 
 #scenario-page .sidsailpoint-context p span {
@@ -1148,10 +1179,12 @@ line-height: 120%;
 
 #scenario-page #scenario-img {
     /* max-width: 500px; */
-    
-       /* max-width: 572px;  smaller */
-    /* width: 100%; */ /* smaller */
-    /* margin-top: 50px; */ /* smaller */
+
+    /* max-width: 572px;  smaller */
+    /* width: 100%; */
+    /* smaller */
+    /* margin-top: 50px; */
+    /* smaller */
     position: relative;
 }
 
@@ -1161,19 +1194,19 @@ line-height: 120%;
     right: -36px; */
     z-index: -1;
     -webkit-animation-name: hvr-hang-sink, hvr-hang;
-  animation-name: hvr-hang-sink, hvr-hang;
-  -webkit-animation-duration: .3s, 1.5s;
-  animation-duration: .3s, 1.5s;
-  -webkit-animation-delay: 0s, .3s;
-  animation-delay: 0s, .3s;
-  -webkit-animation-timing-function: ease-out, ease-in-out;
-  animation-timing-function: ease-out, ease-in-out;
-  -webkit-animation-iteration-count: 1, infinite;
-  animation-iteration-count: 1, infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-direction: normal, alternate;
-  animation-direction: normal, alternate;
+    animation-name: hvr-hang-sink, hvr-hang;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
     /* smaller */
 }
 
@@ -1194,30 +1227,31 @@ line-height: 120%;
     margin-top: 35px;
 }
 
-#back-btn-question{
+#back-btn-question {
     margin-top: 35px;
-        gap: 10px;
+    gap: 10px;
     line-height: 80%;
     padding: 10px 19px;
 }
 
-#back-btn-question svg{
+#back-btn-question svg {
     transform: rotate(180deg);
 }
 
 /* result */
-#results-page{
+#results-page {
     position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
 }
 
-#results-page .content-wrapper{
+#results-page .content-wrapper {
     max-width: 100%;
 }
+
 #results-page .sidsailpoint-eyeBrow,
-#results-page .result-title{
+#results-page .result-title {
     color: var(--white);
 }
 
@@ -1227,7 +1261,7 @@ line-height: 120%;
     justify-content: space-between;
 }
 
-.results-description--grayBG{
+.results-description--grayBG {
     background-color: var(--lightGray);
     border-radius: 24px;
     padding: 50px 30px;
@@ -1235,57 +1269,56 @@ line-height: 120%;
     margin: 0 auto 50px;
 }
 
-.results-description--grayBG h4{
+.results-description--grayBG h4 {
     color: var(--cobalt);
     margin-bottom: 20px;
 }
 
 #results-description--second,
 #results-links,
-.results-social{
+.results-social {
     max-width: 348px;
     margin: 0 auto 15px;
 }
 
-#results-description{
+#results-description {
     max-width: calc(100% - 885px);
     width: 100%;
 }
 
-#results-description a{
+#results-description a {
     color: var(--blue);
     font-size: 16px;
     text-decoration: none;
-    display: inline-flex
-;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#results-description a span{
+#results-description a span {
     padding-right: 2px;
 }
 
-#results-description a img{
-        width: 20px;
+#results-description a img {
+    width: 20px;
     height: 20px
 }
 
-#results-links a:first-of-type{
+#results-links a:first-of-type {
     line-height: 70px
 }
 
-.results-social{
+.results-social {
     margin-top: 50px;
 }
 
-.results-social h4{
+.results-social h4 {
     font-size: 18px;
     margin-bottom: 12px;
 }
 
-.results-social--icon{
-        display: flex;
+.results-social--icon {
+    display: flex;
     gap: 30px;
 }
 
@@ -1293,76 +1326,77 @@ line-height: 120%;
     width: 16px;
 }
 
-.stage-button .tag{
+.stage-button .tag {
     opacity: 0;
     transition: all 0.2s;
-} 
-.stage-button.unlocked:hover .tag{
+}
+
+.stage-button.unlocked:hover .tag {
     opacity: 1;
     transition: all 0.2s;
 }
 
 .stage-button.completed:hover .tag,
-.stage-button.completed .tag{
+.stage-button.completed .tag {
     opacity: 1;
     transition: all 0.2s;
 }
 
-.hide{
-    opacity:0;
+.hide {
+    opacity: 0;
     transition: all 0.2s;
 }
 
-.stage-button.completed .hide{
-    opacity:1;
+.stage-button.completed .hide {
+    opacity: 1;
     transition: all 0.2ss;
 }
 
 .stage-button.unlocked .hideNumber,
-.stage-button.completed .hideNumber{
+.stage-button.completed .hideNumber {
     opacity: 1;
     transition: all 0.2s;
 }
 
-.hideNumber{
+.hideNumber {
     opacity: 0;
 }
 
 .stage-button.unlocked .hideLock,
-.stage-button.completed .hideLock{
+.stage-button.completed .hideLock {
     opacity: 0;
     transition: all 0.2s;
 }
 
-#map-page{
+#map-page {
     position: relative;
 }
 
-#sidsailpoint-overlayState{
+#sidsailpoint-overlayState {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
 }
 
-#sidsailpoint-overlayState .flex{
-        background: none;
+#sidsailpoint-overlayState .flex {
+    background: none;
     align-items: center;
     justify-content: space-between;
     padding: 0;
-   margin: 0 0 35px;
+    margin: 0 0 35px;
 }
 
-#exit{
-        display: flex
-;
+#exit {
+    cursor: pointer;
+    display: flex;
     flex-direction: row-reverse;
     position: absolute;
     right: 50px;
 }
 
-#sidsailpoint-overlayState .overlay-content{
+#sidsailpoint-overlayState .overlay-content {
     background: var(--lightGray);
     position: absolute;
     top: 50%;
@@ -1377,42 +1411,42 @@ line-height: 120%;
     width: 100%;
 }
 
-#sidsailpoint-overlayState .overlay-content .text-content p{
+#sidsailpoint-overlayState .overlay-content .text-content p {
     font-size: 16px !important;
-    display: flex
-;
+    display: flex;
     line-height: 160%;
     gap: 15px;
 }
 
-#sidsailpoint-overlayState .stat{
+#sidsailpoint-overlayState .stat {
     border-radius: 20px;
-background: var(--white);
+    background: var(--white);
     padding: 25px;
     margin-bottom: 25px;
 }
-#sidsailpoint-overlayState .stat:last-of-type{
+
+#sidsailpoint-overlayState .stat:last-of-type {
     margin-bottom: 35px;
 }
 
-#sidsailpoint-overlayState .stat p{
-        display: flex
-;
+#sidsailpoint-overlayState .stat p {
+    display: flex;
     align-items: center;
     gap: 15px;
 }
 
-#sidsailpoint-overlayState .stat p span.poppins-semibold{
-        color: var(--hotPink) !important;
+#sidsailpoint-overlayState .stat p span.poppins-semibold {
+    color: var(--hotPink) !important;
     font-size: 40px;
     line-height: 120%;
 }
 
-#sidsailpoint-overlayState .source{
+#sidsailpoint-overlayState .source {
 
     font-size: 14px;
 }
-#sidsailpoint-overlayState .stat p:last-of-type span{
+
+#sidsailpoint-overlayState .stat p:last-of-type span {
     color: var(--darkGray);
 }
 
