@@ -1100,6 +1100,10 @@ header {
     height: 100%;
 }
 
+.mobile-map{
+    display: none;
+}
+
 #map-page svg {
     max-width: 1220px;
     width: 100%;

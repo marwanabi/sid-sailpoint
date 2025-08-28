@@ -178,32 +178,49 @@ class AdventureQuiz {
         const completedQuestions = this.quizState.stages.filter(stage => stage.completed).length;
         
         // Apply classes to SVG stages
-        const svgStages = document.querySelectorAll('#Layer_1 [data-stage]');
+        const svgStages = document.querySelectorAll('#Layer_1 [data-stage], #Layer_2 [data-stage]');
         this.quizState.stages.forEach(stage => {
-            const svgElement = document.querySelector(`#Layer_1 [data-stage="${stage.id}"]`);
+            // Handle Layer_1
+            const svgElement1 = document.querySelector(`#Layer_1 [data-stage="${stage.id}"]`);
+            // Handle Layer_2
+            const svgElement2 = document.querySelector(`#Layer_2 [data-stage="${stage.id}"]`);
             const helperElement = document.querySelector(`[data-stageHelper="${stage.id}"]`);
-            if (svgElement) {
-                // Clear existing classes
-                svgElement.classList.remove('completed', 'locked', 'unlocked');
-                
-                // Apply new classes based on state
-                if (stage.completed) {
-                    svgElement.classList.add('completed');
-                } else if (!stage.unlocked) {
-                    svgElement.classList.add('locked');
-                } else {
-                    svgElement.classList.add('unlocked');
+            const svgElements = [svgElement1, svgElement2];
+            svgElements.forEach((svgElement, layerIndex) => {
+                if (svgElement) {
+                    // Clear existing classes
+                    svgElement.classList.remove('completed', 'locked', 'unlocked');
+                    
+                    // Apply new classes based on state
+                    if (stage.completed) {
+                        svgElement.classList.add('completed');
+                    } else if (!stage.unlocked) {
+                        svgElement.classList.add('locked');
+                    } else {
+                        svgElement.classList.add('unlocked');
+                    }
+                    
+                    // Add click handler for unlocked stages
+                    if (stage.unlocked) {
+                        svgElement.style.cursor = 'pointer';
+                        
+                        // For Layer_2 (index 1), scroll to the clicked element first then navigate
+                        if (layerIndex === 1) {
+                            svgElement.onclick = () => {
+                                svgElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                setTimeout(() => {
+                                    this.navigateToStage(stage.id);
+                                }, 500); // Wait for scroll to complete
+                            };
+                        } else {
+                            svgElement.onclick = () => this.navigateToStage(stage.id);
+                        }
+                    } else {
+                        svgElement.style.cursor = 'default';
+                        svgElement.onclick = null;
+                    }
                 }
-                
-                // Add click handler for unlocked stages
-                if (stage.unlocked) {
-                    svgElement.style.cursor = 'pointer';
-                    svgElement.onclick = () => this.navigateToStage(stage.id);
-                } else {
-                    svgElement.style.cursor = 'default';
-                    svgElement.onclick = null;
-                }
-            }
+            });
             
             // Apply the same classes to helper elements
             if (helperElement) {
@@ -226,6 +243,13 @@ class AdventureQuiz {
         if (this.quizState.isCompleted) {
             resultsBtn.style.display = 'inline-flex';
         }
+        // Auto-scroll to unlocked element in Layer_2
+        setTimeout(() => {
+            const unlockedElement = document.querySelector('#Layer_2 [data-stage].unlocked');
+            if (unlockedElement) {
+                unlockedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }, 100); 
     }
     
     navigateToStage(stageId) {
