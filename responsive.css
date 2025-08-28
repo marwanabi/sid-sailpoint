@@ -114,6 +114,21 @@
     }
 }
 
+@keyframes slide-down {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+.animate-slide-down {
+    animation: slide-down 0.5s ease-out;
+}
+
 @media (max-width: 1380px){
 #scenario-page .options-container{
     gap: 15px;
@@ -162,8 +177,16 @@
     .desktop-map{
         display: none;
     }
-
-
+#map-page{
+    height: 100%;
+}
+#map-page svg{
+    padding: 50px 50px 0;
+    height: auto;
+}
+#sidsailpoint-overlayState .overlay-content{
+    max-width: 700px;
+}
     #scenario-page .scenario-content{
         animation: slide-up 0.5s linear;
     }
@@ -288,6 +311,21 @@ animation: scale-in 0.5s ease-out;
         list-style-type: auto;
     }
 
+    #map-page svg{
+    padding: 50px 20px;
+}
+
+#sidsailpoint-overlayState .overlay-content{
+    max-width: 390px;
+    padding: 30px 25px;
+}
+
+#sidsailpoint-overlayState .stat p{
+    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
     #scenario-page .sidsailpoint-context{
         flex-direction: column;
         align-items: flex-start;
@@ -315,4 +353,11 @@ animation: scale-in 0.5s ease-out;
  body.quiz-completed nav.sidsailpoint-navigation.flex{
     flex-direction: row;
  }
+}
+
+@media (max-width: 390px){
+    #sidsailpoint-overlayState .overlay-content{
+    max-width: 320px;
+    padding: 30px 25px;
+}
 }
