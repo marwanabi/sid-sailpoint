@@ -115,7 +115,7 @@ class AdventureQuiz {
         // Show/hide sidsailpoint-workProcess-page based on map-page navigation
         const workProcessPage = document.getElementById('sidsailpoint-workProcess-page');
         if (workProcessPage) {
-            if (page === 'map') {
+            if (page === 'map' && !this.quizState.isCompleted) {
                 workProcessPage.style.display = 'block';
                 workProcessPage.classList.remove('animate-fade-out');
                 workProcessPage.classList.add('animate-fade-in');
@@ -363,6 +363,13 @@ class AdventureQuiz {
 </svg>
 `;
         document.getElementById('continue-btn').onclick = () => app.showQuestion();
+        // Show "Return to Map" button if this is a revisited answered question
+        const returnToMapBtn = document.getElementById('return-to-map-btn');
+        if (wasAnswered) {
+            returnToMapBtn.style.display = 'inline-flex';
+        } else {
+            returnToMapBtn.style.display = 'none';
+        }
     }
     
     showQuestion() {
@@ -374,6 +381,8 @@ class AdventureQuiz {
         
         // Hide continue button immediately
         document.getElementById('continue-btn').style.display = 'none';
+        document.getElementById('return-to-map-btn').style.display = 'none';
+        
         
         // After fade-out completes, show question section with fade-in
         setTimeout(() => {
@@ -557,6 +566,15 @@ class AdventureQuiz {
         }
     }
     
+    returnToMapFromScenario() {
+        // Navigate to map and hide work process page
+        this.navigateTo('map');
+        const workProcessPage = document.getElementById('sidsailpoint-workProcess-page');
+        if (workProcessPage) {
+            workProcessPage.style.display = 'none';
+        }
+    }
+
     continueAdventure() {
         if (this.currentStage < 7) {
             // this.unlockNextStage(this.currentStage);

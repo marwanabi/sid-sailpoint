@@ -867,7 +867,7 @@ header {
     flex: 1.5;
     height: 100%;
     text-align: center;
-    padding: 100px 0;
+    padding: 70px 0;
     max-width: 885px;
     position: relative;
 
@@ -1234,7 +1234,33 @@ header {
 }
 
 #scenario-page .button-group {
-    justify-content: flex-end;
+    display: block;
+}
+
+#return-to-map-btn{
+    float: left;
+        display: flex
+;
+    gap: 10px;
+    line-height: 80%;
+    padding: 10px 19px;
+}
+
+#return-to-map-btn svg{
+    transform: rotate(180deg);
+}
+
+.results-card #return-to-map-btn{
+    max-width: 217px;
+    margin: 40px auto 0;
+    padding: 10px 16px;
+    background: var(--hotPink);
+    color: var(--white);
+    border: none;
+}
+
+#scenario-page .button-group #continue-btn{
+    float: right;
 }
 
 #continue-btn,
