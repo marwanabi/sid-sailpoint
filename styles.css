@@ -1409,7 +1409,8 @@ header {
 }
 
 .hide,
-.stage-button.completed .hidden {
+.stage-button.completed .hidden,
+.stage-button.stage-button.unlocked .lock {
     opacity: 0;
     transition: all 0.2s;
 }

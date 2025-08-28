@@ -170,6 +170,12 @@
 }
 
 @media (max-width: 1070px) {
+
+#sidsailpoint-workProcess-page{
+    /* height: calc(100vh - 61px); */
+            height: 100vh;
+        position: fixed;
+}
     .mobile-map{
         display: block;
     }
@@ -283,11 +289,6 @@ animation: scale-in 0.5s ease-out;
         font-size: 28px;
         line-height: 120%;
     }
-#sidsailpoint-workProcess-page{
-    /* height: calc(100vh - 61px); */
-            height: 100vh;
-        position: fixed;
-}
     #sidsailpoint-workProcess-page .content-wrapper{
         padding: 42px 20px;
     }
